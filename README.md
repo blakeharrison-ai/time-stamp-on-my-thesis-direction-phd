@@ -5,6 +5,10 @@ Research safe:
 ## FOCUS
 **Intent-Aligned Imagination for Mixed-Initiative Human–Machine Co-Creation in Interactive Worlds**.
 
+## Here Be Giants Simulations Alignment with Thesis/Dissertation Conceptually:
+Here Be Giants World Simulators Lab
+Co-Creative, Intent-Aligned World Modeling for Mixed-Initiative Human–Machine Teaming
+
 ## Validation Regimes (3)
 - Safe Embodiment Planning Under Uncertainty (MBRL/MPC in our case)  
   - This is where the mobile manipulation came in.  
