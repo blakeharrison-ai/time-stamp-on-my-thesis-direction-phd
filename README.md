@@ -3,7 +3,7 @@
 Research safe:
 
 ## FOCUS
-**World Model Decision-Time Objective Alignment** for Natural-Language-Constrained Planning in Mixed-Initiative Human–Machine Teaming.
+**Intent-Aligned Imagination for Mixed-Initiative Human–Machine Co-Creation in Interactive Worlds**.
 
 ## Validation Regimes (3)
 - Safe Embodiment Planning Under Uncertainty (MBRL/MPC in our case)  
