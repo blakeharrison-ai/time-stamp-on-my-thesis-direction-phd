@@ -3,6 +3,9 @@
 Research safe:
 
 ## FOCUS
+
+Belief-space constrained dynamic programming over learned causal world models.
+
 Core community:
 **Embodied Decision-Time Planning for Autonomous Agents.**
 
