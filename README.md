@@ -192,3 +192,218 @@ Blake
 - My hard target is to have v1 of the main experimental results and draft ready this week for team review, so we have ~1.5 weeks before the ICML abstract deadline for revisions and remaining ablations.
 
 Note: prior also shared today with advisor so direction is locked in.
+
+0) Data axis spanning (coverage & diversity as a first-class strategy)
+
+Sparse tasks fail most often because the agent never sees the right states. The “data axis” approach is: engineer coverage.
+
+Behavior diversity: mixture of policies (random + scripted + prior policy + planner rollouts) to populate replay with diverse modes.
+
+State-space coverage objectives: novelty/coverage maximization, visit-count proxies, ensemble disagreement–driven collection.
+
+Cross-domain / cross-embodiment data: combine data from multiple morphologies/sensors/tasks to widen support; VLAs explicitly study when/how to add cross-embodiment data.
+
+Dataset curation pipelines: balance terminals, hard negatives, rare obstacle segments, success/failure ratio; prioritize “near-success” slices (Go-Explore style).
+
+Domain randomization / procedural generation: widen distribution (terrain families, friction, slopes, obstacles) to reduce brittle local optima.
+
+Active data collection: collect where uncertainty/TD-error is high (a “hardness sampling” curriculum).
+
+1) Training staging: state-only → multimodal distillation → PEFT / final finetune
+
+This is a high-leverage stability pattern for complex settings:
+
+Learn control/value in low-dim state (or privileged state)
+
+Faster learning, cleaner TD targets, fewer representation pathologies.
+
+Distill to multimodal (images, language, audio)
+
+Teacher: state-based policy/critic/planner
+
+Student: vision(+language) policy/critic; distill logits, Q-values, latent plans, or action sequences.
+
+PEFT / finetune on target modality
+
+LoRA/adapters/prefix-tuning, low-rank heads, small policy heads on frozen backbones.
+
+This is consistent with “multistage training paradigms” used in large world-model work (pretrain → adapt → downstream).
+
+2) Learning from examples / data (IL, Offline RL, Offline→Online)
+
+These are often the winning move for sparse reward.
+
+2.1 Imitation Learning (IL)
+
+BC (behavior cloning), DAgger, GAIL
+
+Sequence-model IL (trajectory-conditioned policies; DT-family as “supervised RL”)
+
+2.2 Offline RL (batch RL)
+
+Behavior-regularized: TD3+BC, AWAC, IQL
+
+Conservative: CQL-style pessimism
+
+Model-based offline RL: MOPO/MOReL/COMBO-like families
+(Use these when you can assemble a big replay/dataset but online exploration is painful.)
+
+2.3 Offline → Online finetuning
+
+Start with offline competence, then do short online finetune (often where planning + conservative value helps most).
+
+3) Reward learning (IRL, preferences, language reward models)
+
+When “hand reward” is the bottleneck, learn the reward.
+
+IRL / AIRL / MaxEnt IRL: infer reward from expert occupancy.
+
+Preference-based RL (PbRL): learn reward from pairwise comparisons (human or model-generated).
+
+Language-derived reward: LLM/VLM critiques or classifiers as learned reward proxies (risky: reward hacking; needs verification/constraints).
+
+4) Reward shaping & curriculum (classic levers, but formalize them)
+
+Potential-based shaping (policy-invariant shaping).
+
+Hierarchical / task-graph shaping: auto-derive shaping from task structure (there are papers doing this even on BipedalWalker Hardcore).
+
+Curriculum learning
+
+Hand curricula (difficulty ramp)
+
+Automated curricula (goal selection, competence progress, teacher-student schedulers)
+
+5) Structural priors / inductive bias (expanded)
+
+You asked explicitly: language, preferences/constraints, graphs, frozen encoders, VLM/WFM, RLVR → yes, all fit here.
+
+5.1 Frozen encoders & representation priors
+
+Frozen CNN/ViT features; pretrained proprio encoders; contrastive SSL encoders
+
+Use as:
+
+observation encoder
+
+auxiliary loss target
+
+intrinsic reward feature space
+
+5.2 Task-agnostic VLMs → VLAs (vision-language-action models)
+
+Use a task-agnostic VLM backbone, then add an action head / policy interface (VLA). Recent work surveys key design choices, including cross-embodiment data scaling.
+
+5.3 World foundation models (WFMs) / large world models
+
+General-purpose world models that can be fine-tuned to specific physical setups is now an explicit framing (e.g., “world foundation model platform”).
+
+Benchmarks/workshops explicitly target “world foundation models” for downstream embodied tasks.
+
+5.4 Language intent as prior (preferences + constraints)
+
+Preferences: scalarization / reward model prior over outcomes.
+
+Constraints: hard/soft constraint embeddings and constraint critics.
+
+Many generalist robot policies take language commands directly (e.g., Octo is language-conditioned).
+
+5.5 Graphs / object-centric priors
+
+Scene graphs, contact graphs, kinematic graphs, relational GNN dynamics → compositional generalization and better OOD structure.
+
+5.6 RLVR as structural prior (verifiable reward channels)
+
+RLVR = reinforcement learning with verifiable rewards: you build reward from checkable predicates (unit tests, constraint checkers, symbolic validators), which acts like a strong prior against reward hacking and can shape exploration.
+In control/robotics terms: “reward = verified satisfaction of specs / constraints / success predicates,” plus dense auxiliary signals.
+
+6) Dimensionality reduction & projection (make the problem “smaller”)
+
+This is underrated and very practical.
+
+Latent-state modeling: learn a compact belief state; plan/control in latent.
+
+Bottlenecks / information constraints: force task-relevant compression.
+
+Projections: PCA / random projections / low-rank adapters (esp. when paired with PEFT).
+
+Manifold-aware control: learn control in a reduced subspace (often improves stability).
+
+7) Exploration systems (beyond “just add curiosity”)
+
+Intrinsic motivation: RND/ICM-style novelty, information gain, disagreement.
+
+Goal-conditioned + relabeling: HER-like relabeling; goal curricula.
+
+Skill discovery: DIAYN/VIC/APS families; then finetune with sparse reward.
+
+Archive-based exploration: Go-Explore/quality-diversity style archives.
+
+8) Planning + imagination/dreaming (I2A, I2A-style blending, dreaming)
+
+This is your requested “I2A blending / imagination” bucket.
+
+MPC planners: CEM/MPPI/CMA-ES over action sequences.
+
+Tree search: MCTS over learned models/value.
+
+I2A (Imagination-Augmented Agents): explicitly mixes model-free policy with learned-model rollouts interpreted by an “imagination” module.
+
+Dreaming / imagination rollouts: generate synthetic experience from the world model; blend with real data (with uncertainty-aware filtering).
+
+9) Stabilization & “don’t blow up” techniques (often decisive in sparse tasks)
+
+Pessimism / conservatism in value learning (avoid OOD action exploitation).
+
+Multi-step targets: TD(λ), Retrace/V-trace, return decomposition.
+
+Distributional / risk-sensitive RL: quantiles, CVaR (helpful when failure penalties dominate).
+
+Constraint / shielded RL: CMDPs, safety layers, barrier functions, action projection.
+
+Practical “recipe stacks” (choose by what you have)
+A) No demos, sparse reward, hard exploration
+
+(Exploration + hierarchy + planning + verification)
+
+intrinsic/disagreement exploration
+
+landmark/options HRL
+
+MPC/CEM planning bias
+
+RLVR-style success/constraint verifiers
+
+optional potential shaping as ablation
+
+B) Demos or scripted examples available
+
+(BC warm start → offline RL → online finetune)
+
+BC / sequence BC
+
+offline RL (IQL/AWAC/TD3+BC)
+
+short online finetune + conservative critic / planner
+
+C) Multimodal deployment required (vision+language), but state exists in sim
+
+(State-first + distill + PEFT)
+
+train state policy/critic/planner
+
+distill to VLM/VLA student
+
+PEFT finetune on target sensors/tasks
+
+D) You want “foundation model priors”
+
+(VLM/VLA + WFM + language intent)
+
+VLM backbone (task-agnostic)
+
+VLA action head
+
+WFM for imagination / data augmentation
+
+language preferences+constraints as priors (plus verifiers)
