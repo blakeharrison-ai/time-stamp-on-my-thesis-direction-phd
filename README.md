@@ -14,6 +14,7 @@ Pillar 2 — Learned causal world simulators as belief dynamics
 
 Pillar 3 — Evolution strategies as decision-time policy improvement
 (3a) with QD / MAP-Elites repertoire for priors and diversity
+(3b) quasi-newton for local basin refinements
 
 Pillar 4 — Game-theoretic formulation (Partially Observable Stochastic Game)
 
