@@ -18,7 +18,7 @@ Pillar 4 — Game-theoretic formulation (Partially Observable Stochastic Game)
 
 Future arch:
 
-Population-Level Evolutionary Computation as a Multi-Agent Extension of Constrained Belief-Space Dynamic Programming via Learned Causal World Simulators
+This framework naturally extends toward population-level coevolution and open-ended artificial life systems.
 
 Core community:
 **Embodied Decision-Time Planning for Autonomous Agents.**
