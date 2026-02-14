@@ -13,6 +13,7 @@ Pillar 1 — Constrained belief-space Dynamic Programming operator
 Pillar 2 — Learned causal world simulators as belief dynamics
 
 Pillar 3 — Evolution strategies as decision-time policy improvement
+(3a) with QD / MAP-Elites repertoire for priors and diversity
 
 Pillar 4 — Game-theoretic formulation (Partially Observable Stochastic Game)
 
