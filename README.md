@@ -18,6 +18,12 @@ Pillar 3 — Evolution strategies as decision-time policy improvement
 
 Pillar 4 — Game-theoretic formulation (Partially Observable Stochastic Game)
 
+Supportive within experiments and pillars:
+Embodiment Control
+Co-creation / Mixed Initiative (showing computational creativity overlap also)
+Natural language intent-alignment
+Exploration strategies
+
 Future arch:
 
 This framework naturally extends toward population-level coevolution and open-ended multi-agent systems.
