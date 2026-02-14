@@ -16,6 +16,10 @@ Pillar 3 — Evolution strategies as decision-time policy improvement
 
 Pillar 4 — Game-theoretic formulation (Partially Observable Stochastic Game)
 
+Future arch:
+
+Population-Level Evolutionary Computation as a Multi-Agent Extension of Constrained Belief-Space Dynamic Programming via Learned Causal World Simulators
+
 Core community:
 **Embodied Decision-Time Planning for Autonomous Agents.**
 
