@@ -22,6 +22,58 @@ Future arch:
 
 This framework naturally extends toward population-level coevolution and open-ended multi-agent systems.
 
+Aside for lifetime of work:
+
+A lifetime direction must generalize across:
+
+Robotics
+
+Game AI
+
+Multi-agent simulation
+
+Human–machine teaming
+
+Ecology / ALife
+
+Decision theory
+
+Your operator spine scales across all of those.
+
+That’s a good sign.
+
+It combines:
+
+Partial observability
+
+Constrained optimal control
+
+Learned dynamics
+
+Counterfactual reasoning
+
+Long-horizon planning
+
+Multi-agent extension
+
+Each of those alone is a multi-decade field.
+
+Combined coherently, that’s very deep.
+
+It also scales across:
+
+Algorithmic work (ES, QD, Newton, MPC variants)
+
+Representation work (causal models, belief factorization)
+
+Theoretical work (convergence, equilibrium operators)
+
+Systems work (distributed simulation)
+
+Application work (games, embodied agents)
+
+Population/ecological work (coevolution)
+
 Core community:
 **Embodied Decision-Time Planning for Autonomous Agents.**
 
