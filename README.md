@@ -4,7 +4,17 @@ Research safe:
 
 ## FOCUS
 
-Belief-space constrained dynamic programming over learned causal world models.
+Coherent Thesis Spine:
+
+Belief-space constrained dynamic programming via learned causal world simulators.
+
+Pillar 1 — Constrained belief-space Dynamic Programming operator
+
+Pillar 2 — Learned causal world simulators as belief dynamics
+
+Pillar 3 — Evolution strategies as decision-time policy improvement
+
+Pillar 4 — Game-theoretic formulation (Partially Observable Stochastic Game)
 
 Core community:
 **Embodied Decision-Time Planning for Autonomous Agents.**
