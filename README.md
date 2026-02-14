@@ -18,7 +18,7 @@ Pillar 4 — Game-theoretic formulation (Partially Observable Stochastic Game)
 
 Future arch:
 
-This framework naturally extends toward population-level coevolution and open-ended artificial life systems.
+This framework naturally extends toward population-level coevolution and open-ended multi-agent systems.
 
 Core community:
 **Embodied Decision-Time Planning for Autonomous Agents.**
