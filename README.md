@@ -12,6 +12,26 @@ formally:
 
 Stable, contraction-preserving belief-space dynamic programming under learned causal world models to mitigate planning-induced model bias.
 
+system identification -> controller repoptimization
+
+examples with regulation -> equillibrium constraints
+
+recoverable no bring back replay for online learning
+causal do-computation
+
+one more week after spring break
+
+want to hear from them before spring break or research plan with minimal research project
+research proposal
+
+concept reachability + bellmann contraction state constraints invariant sets page 126 describes state constraint safe regions 
+dynamic programming or optimal control problem
+engineering challenge into a dynamic programming problem
+
+simplify and relevant to problem of this course
+
+more meaningful which methodology can be applied to this problem
+
 i.e.
 
 Belief-space constrained dynamic programming via learned causal world simulators.
