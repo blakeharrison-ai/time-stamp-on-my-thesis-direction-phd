@@ -6,6 +6,14 @@ Research safe:
 
 Coherent Thesis Spine:
 
+My core thesis problem is "planning-induced model bias under constrained belief-space dynamic programming."
+
+formally:
+
+Stable, contraction-preserving belief-space dynamic programming under learned causal world models to mitigate planning-induced model bias.
+
+i.e.
+
 Belief-space constrained dynamic programming via learned causal world simulators.
 
 Pillar 1 — Constrained belief-space Dynamic Programming operator
