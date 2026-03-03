@@ -10,7 +10,7 @@ My core thesis problem is "planning-induced model bias under constrained belief-
 
 formally:
 
-Stable, contraction-preserving belief-space dynamic programming under learned causal world models to mitigate planning-induced model bias.
+Stable, contraction-preserving belief-space dynamic programming under learned causal world models to mitigate planning-induced model bias for embodied agents.
 
 system identification -> controller repoptimization
 
