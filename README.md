@@ -4,6 +4,343 @@ Research safe:
 
 ## FOCUS
 
+Below is the **clean, thesis-level formulation** that keeps your **core focus exactly as stated** while integrating the additional rigor we discussed (causal belief uncertainty, drift, amortization bias, Free-Path-Energy PD-MPC, emergent DSL, etc.).
+
+I’ll present it in the **same structure you asked for**, but tightened to something you could literally place in a proposal or thesis introduction.
+
+---
+
+# Core Problem
+
+**Language Grounding for Embodied Agents**
+
+Embodied agents must interpret semantic instructions and produce **environment states or action trajectories** that satisfy those instructions while respecting physical constraints.
+
+Formally, given:
+
+* observation history (o_{1:t})
+* belief state (b_t)
+* environment model (M)
+* instruction (u)
+
+the agent must produce behavior
+
+[
+\tau^* = \arg\max_{\tau} P(\tau \mid b_t, u)
+]
+
+where
+
+[
+\tau = (x_0,a_0,x_1,\dots,x_H)
+]
+
+is a trajectory consistent with both the environment dynamics and the instruction.
+
+Language grounding therefore requires **integrating semantic reasoning with physical planning under uncertainty**.
+
+---
+
+# Two Subproblems
+
+## 1. Language-Grounded Scene Generation
+
+Given an instruction (u), generate a structured environment configuration (G).
+
+[
+G^* = \arg\max_G P(G \mid u)
+]
+
+Example instructions:
+
+```text
+put the red block beside the tree
+place the blue block on grid position [3,5]
+generate a dungeon with two rooms and a key
+```
+
+Scene generation is equivalent to **structured state synthesis conditioned on language**.
+
+Representative benchmark:
+
+[https://github.com/amidos2006/pcg_benchmark](https://github.com/amidos2006/pcg_benchmark)
+
+Here the agent must produce a valid **environment state graph** consistent with semantic constraints.
+
+---
+
+## 2. Language-Grounded Task and Motion Planning (TAMP)
+
+Given an instruction (u), generate a trajectory that accomplishes the task.
+
+[
+\tau^* = \arg\max_\tau P(\tau \mid u)
+]
+
+Examples:
+
+```text
+pick up the red block
+avoid the gap
+move around the obstacle
+```
+
+The trajectory must satisfy:
+
+* semantic goals
+* physical feasibility
+* safety constraints.
+
+This is fundamentally **planning conditioned on language**.
+
+---
+
+# Thesis Hypothesis
+
+> **Stable, contraction-preserving belief-space dynamic programming under learned causal world models can mitigate planning-induced model bias for language grounding for embodied agents.**
+
+The central idea is that **language grounding fails today primarily because planning and semantic interpretation are disconnected from belief-space reasoning over causal world models**.
+
+---
+
+# Fundamental Failure Modes
+
+The thesis focuses on four failure modes that prevent reliable language grounding.
+
+---
+
+# 1. Causal World Model Error
+
+Most learned world models approximate:
+
+[
+P(x_{t+1} \mid x_t,a_t)
+]
+
+but ignore the **causal structure** of the environment.
+
+This leads to:
+
+* poor compositional generalization
+* brittle reasoning about object relations
+* failure under interventions.
+
+Solution:
+
+Represent the environment using **causal belief graphs**
+
+[
+G_t = (V_t,E_t)
+]
+
+with nodes representing objects and edges representing relations.
+
+---
+
+# 2. Causal Belief Uncertainty
+
+Embodied agents operate under partial observability.
+
+The correct planning variable is a **belief distribution**
+
+[
+b_t = P(G_t \mid o_{1:t},a_{1:t-1})
+]
+
+However most language-conditioned agents collapse belief to a point estimate.
+
+Ignoring belief uncertainty causes:
+
+* incorrect grounding of objects
+* misinterpretation of relations
+* unsafe planning decisions.
+
+Solution:
+
+Perform planning directly in **belief space**.
+
+---
+
+# 3. Planning-Induced Model Bias (Drift)
+
+When planning with learned world models, errors accumulate over time.
+
+If the model error per step is (\epsilon), then the rollout error grows roughly as
+
+[
+O(H\epsilon)
+]
+
+for horizon (H).
+
+This produces **trajectory drift**, where predicted states diverge from reality.
+
+Drift is especially problematic for language grounding because constraints are evaluated on **incorrect predicted states**.
+
+Solution:
+
+Use **short-horizon model predictive control with value bootstrapping** to stabilize planning.
+
+---
+
+# 4. Amortization Bias
+
+Many language-conditioned agents rely on amortized policies
+
+[
+\pi_\theta(a \mid b,u)
+]
+
+instead of explicit planning.
+
+Amortization introduces representation bias:
+
+[
+\pi_\theta \notin \Pi^*
+]
+
+The learned policy cannot represent all optimal behaviors.
+
+This leads to:
+
+* poor generalization to new instructions
+* failure in rare environments.
+
+Solution:
+
+Replace pure amortization with **planning-based decision making**.
+
+---
+
+# Proposed Framework
+
+The thesis proposes a unified architecture that integrates:
+
+1. **Causal belief graphs**
+2. **Belief-space dynamic programming**
+3. **Contraction-preserving PD-MPC planning**
+4. **Energy-based semantic grounding**
+
+---
+
+# Free Path Energy Planning
+
+The planner minimizes a **Free Path Energy functional**:
+
+[
+\mathcal F(q)
+=============
+
+-\mathbb E_q[R(\tau)]
++
+\frac{1}{\beta} KL(q(\tau),|,p_0(\tau))
+]
+
+subject to
+
+[
+\tau \in \mathcal F(u)
+]
+
+where
+
+* (R(\tau)) is expected return
+* (p_0(\tau)) is a proposal trajectory prior
+* (\mathcal F(u)) encodes language-derived constraints.
+
+Language modifies the planner through:
+
+### Soft preference energies
+
+[
+E_{pref}(u,\tau)
+]
+
+### Hard constraint barriers
+
+[
+g_{hard}(u,x_t)
+]
+
+which produce infinite energy penalties when violated.
+
+---
+
+# Resulting Planning Law
+
+The optimal trajectory distribution becomes
+
+[
+q^*(\tau)
+\propto
+p_0(\tau)
+\exp(\beta R(\tau))
+\mathbf 1_{\mathcal F(u)}
+]
+
+This formulation integrates:
+
+* planning
+* uncertainty
+* semantic constraints
+
+within a single probabilistic framework.
+
+---
+
+# Conceptual Architecture
+
+```text
+observation
+      ↓
+belief inference
+      ↓
+causal belief graph
+      ↓
+latent semantic intent
+      ↓
+spectral task abstraction
+      ↓
+Free Path Energy PD-MPC
+      ↓
+actions or generated scenes
+```
+
+The same architecture supports both subproblems:
+
+* **scene generation** (choosing a valid environment state)
+* **task and motion planning** (choosing a valid trajectory).
+
+---
+
+# Thesis Contributions
+
+The thesis contributes a unified framework for language grounding that:
+
+1. learns **causal world models** of environments,
+2. performs **belief-space dynamic programming**,
+3. mitigates **planning-induced drift and amortization bias** using contraction-preserving MPC,
+4. integrates language semantics as **energy-based trajectory constraints**.
+
+---
+
+# One-Sentence Thesis Statement
+
+A concise statement is:
+
+> Language grounding for embodied agents can be improved by performing contraction-preserving belief-space dynamic programming over causal world models while representing semantic instructions as energy-based constraints on trajectory distributions.
+
+---
+
+If you'd like, I can also show you **the most natural 3–4 paper breakdown of this thesis** (CoRL / NeurIPS / ICRA / AIIDE) that cleanly separates:
+
+* scene generation
+* TAMP
+* world models
+* semantic grounding.
+
+
+
 Coherent Thesis Spine:
 
 My core thesis problem is "planning-induced model bias under constrained belief-space dynamic programming."
