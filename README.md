@@ -10,9 +10,75 @@ I’ll present it in the **same structure you asked for**, but tightened to some
 
 ---
 
+Formulation:
+
+tl;dr — until I send the full drafts over the next few weeks, my main focus is Hologram and the Universe in a Bottle (UIB) survey/framework for natural language command understanding in embodied agents.
+
+I had a pretty important breakthrough in how to position the method: the math fits much more naturally as an offline RL method than as a purely online method with heavy reward shaping. Once I stopped forcing it into the online framing, it clicked as the baseline I had been looking for.
+
+At a high level, the direction now looks like this:
+
+1. Hologram = the low-level control layer
+learned world simulator
+approximate dynamic programming
+HJB / viscosity-style framing
+free-energy / Gibbs connection for compositional constraints and more stable rollout-based imagination
+
+2. Causal Deep Belief Graph scaffolding
+Judea Pearl-style causal structure
+DSL for counterfactual/meta-level reasoning
+
+3. ASP admissibility layer
+feasibility
+reachability
+repair
+
+The broader goal is to use these pieces together to improve natural language command understanding, i.e. helping an agent understand a language command and execute it faithfully under constraints.
+
+This broader staged thesis direction is what I’m calling Universe in a Bottle (UIB).
+A big part of the insight is that this problem seems much better suited to a staged offline-first approach:
+learn world simulators offline
+learn value functions offline
+do online control optimization on top of those learned components
+
+That feels much closer in spirit to methods like MuZero and also aligns better with the stability issues I kept running into with fully online approaches. It also connects well with prior work I’ve done around Decision Transformer-style methods.
+
+So for the immediate research plan, I’m no longer fighting upstream on the online framing. Instead:
+Paper 1 / CoRL: Hologram as the minimal low-level offline baseline
+Survey / journal paper: UIB as the broader proposed framework for command understanding
+Paper 2 / AIIDE: graph edits + procedural generation + certification, likely using a more direct Decision Transformer style approach for that layer
+
+One concise way to state the core connection is:
+Imagination := rollout under a learned latent world model
+
+That framing is turning out to be much cleaner for everything.
+
+I’m also connecting this as general UIB solutions to different command understanding problems:
+procedural generation via structured graph editing for constrained emergence
+How energy based formulation enables additive compositional terms and more coherent rollouts via free energy gibbs + yoshida integration and HJB viscosity formulation connecting bellman fixed point optimization and energy based landscapes between agent and world simulator (contribution of Hologram).
+causal graph discovery via curiosity for coverage
+counterfactual editing for DSL meta control / communication between agent and its world model
+evolutionary RL for data collection / self-play / self-improvement
+I2A-style imagination during online optimization for improved sample efficiency, transfer learning negative energy reduction and dynamic adaption
+Stability and how staging offline + distillation and curriculum + HRL and options can be used to achieve stable policies that can be used for online control optimization under belief constraints (i.e. operations control)
+
+My plan now is to build this bottom-up, paper by paper, with a minimal viable research paper approach rather than trying to force the entire stack into one result at once.
+So the two main priorities right now are:
+Hologram as the CoRL-targeted base method
+the UIB survey/framework paper
+
+After that, I’ll push the AIIDE graph-edit paper, which should let me define the causal graph + admissibility layers more concretely, i.e. with red teaming / POSG minimax belief-flow style certification.
+
+I also still have the curiosity / causal graph discovery direction in mind for a later ICLR-style paper, especially since it connects naturally to the DataCollector and self-play work, but I’m intentionally keeping that scoped down for now until I have proof-of-concept results.
+
+Overall, the key shift is:
+stage the system, lean into offline RL, keep the components modular, and prioritize stability.
+That shift feels much cleaner both scientifically and as a long-term research direction
+
+---
 # Core Problem
 
-**Language Grounding for Embodied Agents**
+**Language Grounding Command Understanding for Embodied Agents**
 
 Embodied agents must interpret semantic instructions and produce **environment states or action trajectories** that satisfy those instructions while respecting physical constraints.
 
