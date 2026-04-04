@@ -76,6 +76,46 @@ stage the system, lean into offline RL, keep the components modular, and priorit
 That shift feels much cleaner both scientifically and as a long-term research direction
 
 ---
+
+Then I revised to:
+
+I’ve pivoted Hologram (from ATLAS) into a much cleaner formulation as an offline goal-conditioned RL method for constrained control.
+At a high level:
+Rollout := imagination under a learned world model
+
+Control is formulated through an Hamiltonian-Jacobian-Bellman Viscosity (HJB) / free-energy (Gibbs) objective, which lets me compose multiple task, preference, and constraint terms cleanly for long-horizon planning under constraints
+
+Optimization is done via approximate dynamic programming + planning, rather than actor-critic
+This fits much better with the multi-objective goal conditioning work I’ve been doing. It’s also significantly more stable than the earlier reward-shaping formulation and aligns naturally with language conditioning (language → goals / constraints / preferences).
+Connection to prior work is fairly direct:
+
+model-based RL / TD-MPC-style planning / approximate dynamic programming
+constrained optimal control
+offline RL with learned world models
+For evaluation, I’m focusing on:
+
+OGBench (goal-conditioned / stitching)
+RoboCasa365 (compositional manipulation + diversity)
+D4RL / Franka Kitchen (canonical offline benchmark)
+CALVIN (language-conditioned long-horizon tasks)
+Metrics will center on:
+
+task success / instruction following
+constraint compliance (violation rate / safety adherence)
+diversity / coverage
+Plan:
+
+Share initial results this coming week (single-seed, sanity + early comparisons)
+Share a first draft within ~2 weeks
+Then expand to multi-seed evaluation and ablations
+
+
+I’m intentionally shifting to a more bottom-up approach (experiments → iteration → theory tightening), and time-boxing broader survey framing for now. There are additional extensions I’m thinking about (e.g., PCG, multi-agent settings), but I’m keeping the current effort tightly scoped to this formulation.
+
+Overall this direction feels much cleaner and better aligned with both the problem and my stack. Would appreciate any early feedback once I send results.
+
+---
+
 # Core Problem
 
 **Language Grounding Command Understanding for Embodied Agents**
