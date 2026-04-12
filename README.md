@@ -1,5 +1,59 @@
 # time-stamp-on-my-thesis-direction-phd
 
+Here are my comments to my PhD Advisor I sent for my research directional focus:
+
+TL;DR: Extend symbol grounding to control by introducing feasibility as an explicit layer between perception and action, and use model-based planning for constraint-consistent execution.
+
+I think I’ve clarified the core positioning of my work and how it connects to both classical symbol grounding and current VLM/VLA approaches.
+
+The key shift is that I’m no longer trying to build a full VLM-based controller from scratch. Instead, I treat a strong multimodal model (e.g., Gemma 4) as a fixed grounding frontend, and focus my contribution on a learned admissibility layer and model-based control on top of it.
+
+The pipeline is:
+VLM (QLoRA) → latent bridge (Mamba2 + XL memory) → learned admissible action set → model-based control (ADP / MPC)
+The main idea is to explicitly decouple:
+
+grounding (handled by the VLM),
+feasibility (handled by a learned admissibility model),
+control (handled by model-based planning).
+
+
+Concretely, instead of learning a policy π(a|o, l), I learn an admissible set A_adm(s, l) and then perform constrained optimization:
+a_t ∈ argmin_{a ∈ A_adm} Q(s, a)
+
+This reframes offline goal-conditioned RL as learning a feasibility/verification operator over actions conditioned on grounded state, which is then combined with model-based planning (e.g., ADP/MPC with QD-style proposal generation).
+
+Conceptually, I’ve been thinking of this as extending the classical symbol grounding problem. Traditionally, grounding focuses on mapping symbols to perceptual representations:
+Symbol → Perception
+
+Modern VLM/VLA approaches extend this to action:
+Language → Representation → Action
+
+But they still rely on implicit learning of feasibility and constraints. My view is that grounding for embodied agents is incomplete without an explicit feasibility layer, so the full structure should be:
+Symbol → Perception → Feasibility → Action
+
+In this formulation, a symbol is only “grounded” if it induces a non-empty, constraint-consistent admissible set of actions. This provides a cleaner connection between language grounding, control, and safety.
+
+From a modeling perspective, I’ve been viewing the admissibility layer as an energy-based feasibility model. One way I’ve been instantiating this is through physically-inspired structure (i.e. I use optical light transport theory / interface constraints like total internal reflection, reaction–diffusion self-organization, and attractor-based regime structure), which provides a structured way to represent constraint propagation, repair, and feasible regions of control. In this framing, these are not separate contributions, but one possible instantiation of the admissibility energy. I also use a free-energy Gibbs formulation with symplectic (Yoshida-style) integration to encourage stable long-horizon imagination/rollouts.
+
+For Paper 1 (NeurIPS/CoRL), I’m focusing specifically on the admissibility component and its integration into low-level model-based control, using a fixed VLM frontend. This gives a clean experimental setup where I can evaluate both on higher-level embodied tasks (VLM/VLA-style benchmarks) and smaller controlled environments (e.g., OGBench/Atari-style settings) to isolate the contribution via ablations.
+
+I’ll share a draft this week. One open question I’d appreciate your input on:
+does it make more sense to primarily use a smaller VLM (e.g., Gemma E4B) to highlight the benefit of admissibility under imperfect grounding, or should I also include results with a larger model to demonstrate robustness?
+
+and also in the thread reply:
+
+In my survey, I’m also connecting this framework to areas like procedural generation, ASP, and causality. I’m viewing these as structured ways to encode constraints and intervention semantics, which can strengthen the admissibility component in the grounding + control pipeline. I’m also using QD (e.g., Elite Maps) to introduce diversity within the admissible set.
+
+The unifying perspective is that admissibility acts as a learned feasibility layer for control: it allows the system to enforce hard constraints while still optimizing over soft preferences during planning.
+
+This naturally connects to domains like computational creativity, PCG, visual navigation, and mobile manipulation, where you need to balance strict feasibility requirements with under-specified or stylistic objectives.
+
+Compared to approaches that rely primarily on trust regions or soft penalties, this formulation enforces constraints directly during rollout via the admissible action set. Under the standard assumptions in the model, this gives stronger feasibility guarantees within the planning loop.
+
+I’m thinking of this overall direction as a modern formulation of language grounding for control, where language specifies constraints and preferences, and admissibility enforces them during planning.
+
+
+
 Research safe:
 
 ## FOCUS
