@@ -1,5 +1,277 @@
 # time-stamp-on-my-thesis-direction-phd
 
+Thesis statement:
+
+In multiagent embodied systems, behavioral support is neither necessary nor sufficient for admissibility under distribution shift and extended horizons. This thesis develops constructive admissibility mechanisms — topological belief graphs, relational fields, emergent grammars, and local self-organization rules — that constrain learned behavior so local interactions compose into globally admissible team behavior.
+
+\documentclass[10pt,letterpaper]{article}
+
+% Generic Overleaf / pdfLaTeX-compatible preamble.
+% Compile with: pdflatex main.tex
+\usepackage[margin=0.95in,top=1.05in,bottom=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,fit,positioning,backgrounds}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+
+% Better line breaking for long URLs and dense prose.
+\Urlmuskip=0mu plus 2mu
+\emergencystretch=3em
+\hypersetup{
+  pdftitle={Biggest Cross-Cutting Problems in Multiagent Human-Machine Teaming, Co-Creation, HRI, and Multiagent Systems},
+  pdfauthor={ChatGPT Deep Research},
+  pdfcreator={LaTeX conversion}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.60em}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.15em,topsep=0.25em}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.28}
+\sloppy
+
+\titleformat{\section}{\Large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.05em}{0.42em}
+\titlespacing*{\subsection}{0pt}{0.9em}{0.25em}
+
+\newcommand{\sourcemark}[1]{%
+  \textsuperscript{\tikz[baseline=(m.base)]\node[fill=black!8,circle,inner sep=1.25pt,font=\tiny] (m) {#1};}%
+}
+
+\newcommand{\sourceitem}[2]{%
+  \par\noindent\sourcemark{#1}\hspace{0.45em}{\footnotesize\url{#2}}\par\vspace{0.30em}
+}
+
+\newcommand{\docmark}{%
+  \begin{tikzpicture}[x=1em,y=1em,baseline=-0.45em,line width=0.115em,line cap=round,line join=round]
+    \foreach \a in {0,60,...,300}{%
+      \begin{scope}[rotate=\a]
+        \draw (0,0) .. controls (0.55,0.05) and (0.83,0.38) .. (0.82,0.78)
+              .. controls (0.80,1.08) and (0.53,1.28) .. (0.25,1.31);
+      \end{scope}%
+    }
+  \end{tikzpicture}%
+}
+
+\newcommand{\problempara}[3]{%
+  \par\noindent\textbf{#1. #2.} #3\par
+}
+
+\begin{document}
+
+{\Large\bfseries \docmark\hspace{0.55em}ChatGPT}\par\vspace{0.75em}
+
+{\fontsize{19.7}{25}\selectfont\bfseries Biggest Cross-Cutting Problems in Multiagent\\[0.25em]
+Human--Machine Teaming, Co-Creation, HRI, and\\[0.25em]
+Multiagent Systems\par}
+
+\section*{Thesis General Direction}
+
+In multiagent embodied systems, behavioral support is neither necessary nor sufficient for admissibility under distribution shift and extended horizons. This thesis develops constructive admissibility mechanisms — topological belief graphs, relational fields, emergent grammars, and local self-organization rules — that constrain learned behavior so local interactions compose into globally admissible team behavior.
+
+Documenting Red Teaming verification and repair, reachibility, feasibility and repair so I remember to integrate
+
+\section*{Executive summary}
+
+Across human--machine teaming, co-creation, human--robot interaction, and multiagent systems, the hardest problems are no longer best described as isolated model-accuracy problems. The field has increasingly reframed them as \emph{coordination and governance problems in sociotechnical systems}: agents must coordinate under uncertainty, maintain common ground with humans and unfamiliar partners, fail safely, remain supervisable, and operate within workable legal and organizational structures. That shift is visible in the move from ``machine behaviour'' and ``cooperative AI'' research agendas to lifecycle risk-management frameworks and new teamwork benchmarks (Rahwan et al., 2019; Dafoe et al., 2021; National Academies, 2022; NIST, 2024). \sourcemark{1}
+
+My ranking below prioritizes problems by cross-domain harm potential and by the size of the gap between deployment speed and research maturity. The top eight are: safety assurance; common ground and intent alignment; robust coordination in open teams; trust calibration and controllability; human agency, workload, and skill retention; evaluation and reproducibility; accountability/privacy/IP governance; and bias, value pluralism, and vulnerable-user harms. In co-creation specifically, the evidence is especially clear that AI can increase average output quality while narrowing diversity and weakening creative agency when humans are reduced to editors rather than genuine collaborators (Doshi and Hauser, 2024; McGuire et al., 2024). Meanwhile, MARL/HMT benchmarking work shows that claimed progress is often fragile, poorly standardized, or insufficiently ecological (Bettini et al., 2024; Poelitz et al., 2026; Wang et al., 2026). \sourcemark{2}
+
+A practical conclusion follows. The next wave of research should optimize less for isolated task success and more for \emph{team complementarity under uncertainty}: explicit goal and intent representations, human-interpretable inter-agent communication, compositional safety cases with runtime monitoring, adaptive autonomy that preserves human capability, and benchmarks that measure teamwork processes, not only outputs. Regulatory work is also converging on this lifecycle view, through NIST's cross-sector profile, the EU AI Act timeline, U.S. accountability guidance, and copyright/privacy guidance for generative systems. \sourcemark{3}
+
+\section*{Framing the problem space}
+
+I treat HMT broadly as interdependent work by one or more humans and one or more AI agents or robots toward shared goals; because the application domain is unspecified, the analysis emphasizes cross-domain problems that recur in transport, healthcare, industrial robotics, public-sector decision support, and creative workflows. The same families of failure become more severe in safety-critical settings, where human oversight, safety culture, privacy, and liability cannot be treated as afterthoughts, as illustrated by the Tempe ADS fatality, healthcare/social-robot privacy concerns, and updated robot-safety standards. \sourcemark{4}
+
+\clearpage
+\section*{Prioritized cross-cutting problems}
+
+\problempara{1}{Safety assurance and graceful failure}{\textbf{Definition:} the inability to guarantee safe behavior when humans, robots, and software agents interact under distribution shift, sensor error, adversarial conditions, or degraded human attention. \textbf{Why it matters:} in HRI and HMT, failures can become physical injury or death; in general MAS, latent coordination failures scale with the number of interacting components. \textbf{Key subproblems:} runtime monitoring, safe handoff, compositional verification for learned components, cyber-physical security, and standards for open/shared workspaces. \textbf{Real-world impact:} the Uber Tempe ADS crash combined failed pedestrian classification, a design that precluded emergency braking, inattentive human oversight, and inadequate safety culture; newer A3/ISO robot-safety work now treats cybersecurity vulnerabilities as physical safety hazards and highlights gaps for humanoids and dynamically stable robots. \textbf{Open gaps and directions:} compositional assurance cases for team behavior, runtime ``safety shields,'' interaction-failure scenario libraries, and standards tailored to open human-shared environments. \textbf{Representative refs:} NTSB (2020), National Academies (2022), Kouvaros et al. (2024), Garg et al. (2024), A3/ISO (2025--2026). \sourcemark{5}}
+
+\problempara{2}{Common ground, shared mental models, and intent alignment}{\textbf{Definition:} failures to maintain shared beliefs, assumptions, goals, capabilities, and situational awareness across humans and agents. \textbf{Why it matters:} high-performing teamwork depends less on raw intelligence than on whether partners can coordinate, repair misunderstandings, and anticipate each other. \textbf{Key subproblems:} referential grounding, intent communication, shared displays, bi-directional explanations, role-aware information presentation, and explicit goal articulation. \textbf{Real-world impact:} the National Academies note that ad hoc teams often differ in training, terminology, timelines, and authority, degrading cohesion and trust; recent work on language-grounded MARL and common-ground benchmarking shows that current systems still diverge from human collaborative norms. \textbf{Open gaps and directions:} shared-state representations, repair-aware interfaces, human-readable agent protocols, and benchmarks that directly test common ground rather than only task completion. \textbf{Representative refs:} National Academies (2022), Endsley (2023), Bansal et al. (2024), Li et al. (2024), Poelitz et al. (2026). \sourcemark{6}}
+
+\problempara{3}{Robust coordination and generalization in open teams}{\textbf{Definition:} the inability of agents trained in fixed settings to coordinate with novel teammates, changing team sizes, partial observability, and limited communication. \textbf{Why it matters:} real deployments are open systems, not closed training populations; agents must work with unfamiliar humans, third-party robots, or other organizations' agents. \textbf{Key subproblems:} ad hoc teamwork, partner modeling, non-stationarity, sparse credit assignment, emergent conventions, zero-shot coordination, and distribution shift across social situations. \textbf{Real-world impact:} NAHT explicitly uses autonomous-driving and heterogeneous-team examples to show why classical ``all agents under one controller'' assumptions break down; Melting Pot and SMACv2 likewise show that older benchmarks can overstate progress and under-test closed-loop social generalization. \textbf{Open gaps and directions:} open-team training curricula, diverse partner generation, uncertainty-aware teammate models, and standardized large-scale ad hoc teamwork infrastructure. \textbf{Representative refs:} Dafoe et al. (2021), Leibo et al. (2021), Ellis et al. (2023), Wang et al. (2024), Wang et al. (2026). \sourcemark{7}}
+
+\problempara{4}{Trust calibration, transparency, and controllability}{\textbf{Definition:} humans over-rely, under-rely, or misunderstand agents because interfaces do not properly communicate confidence, intent, limits, or control boundaries. \textbf{Why it matters:} the goal is not maximum trust, but well-calibrated trust and meaningful control. \textbf{Key subproblems:} prospective versus retrospective explanations, mode awareness, adjustable autonomy, trust repair, dependence versus trust, and the side effects of anthropomorphism. \textbf{Real-world impact:} transparency/explainability are identified as mechanisms for improving situation awareness and performance, yet recent experiments show design effects can be counterintuitive: lower-explainability teammates were sometimes perceived as more trustworthy or competent, and proactive robot behavior can improve efficiency while also creating expectation-management problems. \textbf{Open gaps and directions:} uncertainty communication, longitudinal trust measures, adaptive explanation, and interfaces that expose both capability and authority boundaries. \textbf{Representative refs:} National Academies (2022), Endsley (2023), Hauptman et al. (2024), Jamshad et al. (2024). \sourcemark{8}}
+
+\problempara{5}{Human agency, workload, skill retention, and role design}{\textbf{Definition:} poor task allocation can trap humans in brittle roles---passive monitor, answer-checker, exception handler, or post-hoc editor---causing overload, boredom, deskilling, or reduced ownership. \textbf{Why it matters:} teaming quality depends on whether humans remain capable, attentive, and willing to intervene. \textbf{Key subproblems:} level of automation, timing of control transfer, routine-versus-failure workload, cognitive offloading, authorship/ownership in co-creation, and training requirements. \textbf{Real-world impact:} HMT literature identifies skill retention and resilience as open gaps; workload changes under autonomy failure are substantial; in co-creation, people are less creative when placed in an editor role than when they genuinely co-create; and GenAI studies report that higher confidence in GenAI is associated with less critical thinking. \textbf{Open gaps and directions:} adaptive autonomy that preserves skill, participatory role design, mode-switches keyed to cognitive state, and co-creative interfaces that preserve self-efficacy and authorship. \textbf{Representative refs:} National Academies (2022), Xu et al. (2023), McGuire et al. (2024), Lee et al. (2025), Doshi and Hauser (2024). \sourcemark{9}}
+
+\problempara{6}{Evaluation, benchmarking, and reproducibility}{\textbf{Definition:} the field lacks stable, comparable, ecologically valid ways to measure team quality across technical, human, and governance dimensions. \textbf{Why it matters:} weak evaluation hides coordination failures and slows cumulative science. \textbf{Key subproblems:} output-centric metrics, poor reporting standards, solved or gameable benchmarks, low ecological validity, and missing measures for teamwork process, common ground, workload, or governance quality. \textbf{Real-world impact:} BenchMARL explicitly describes a reproducibility crisis in MARL; SMACv2 was created because SMAC no longer required sufficiently rich closed-loop policies; NASA's HATTB and the 2026 common-ground benchmark both exist because field-relevant HMT evaluation remains underdeveloped; and co-creation work argues that current evaluations overemphasize artifact quality while under-measuring interaction quality and mental models. \textbf{Open gaps and directions:} multi-level scorecards combining task performance, teamwork process, safety, user outcomes, and auditability; long-horizon field studies; standardized ad hoc teammate sets; and benchmarks that include repair and failure handling. \textbf{Representative refs:} Bettini et al. (2024), Ellis et al. (2023), NASA (2024), Gmeiner et al. (2024), Poelitz et al. (2026), Wang et al. (2026). \sourcemark{10}}
+
+\problempara{7}{Accountability, liability, privacy, IP, and governance ambiguity}{\textbf{Definition:} even when systems work technically, it often remains unclear who is responsible for harms, what disclosures are owed, how incidents should be audited, and how data, privacy, and authorship rights should be handled. \textbf{Why it matters:} this is where otherwise promising systems stall in deployment. \textbf{Key subproblems:} provenance, incident disclosure, auditability, allocation of responsibility between developer/deployer/operator, consent-credit-compensation for training data, and privacy in embodied systems. \textbf{Real-world impact:} NIST's GenAI profile centers lifecycle governance, provenance, testing, and incident disclosure; NTIA recommends independent evaluations for high-risk systems; the EU AI Act is now in phased application; and the U.S. Copyright Office has concluded that GenAI outputs are copyrightable only where a human author determines sufficient expressive elements. Creative-worker interviews also show persistent gaps around consent, credit, and compensation. \textbf{Open gaps and directions:} role-responsibility matrices, deployment logs and provenance, privacy-by-design in robots, audit-friendly interfaces, and domain-specific contracting/oversight practices. \textbf{Representative refs:} NIST (2024), NTIA (2024), European Commission (2024--2026), U.S. Copyright Office (2024--2025), Kyi et al. (2025), Jayaraman et al. (2024). \sourcemark{11}}
+
+\problempara{8}{Bias, value pluralism, and vulnerable-user harms}{\textbf{Definition:} team outputs can encode stereotypes, paternalism, moral framing errors, or manipulative personalization, and these harms can be amplified through human--AI feedback loops. \textbf{Why it matters:} ``human in the loop'' does not reliably remove bias; sometimes it redistributes or legitimizes it. \textbf{Key subproblems:} selective adherence to biased advice, value conflicts across cultures and contexts, feedback-loop amplification, anthropomorphism, harms to children/older adults/patients, and participatory evaluation. \textbf{Real-world impact:} UNESCO's ethics framework centers human rights, fairness, and oversight; public-sector experiments show selective adherence when advice aligns with stereotypes; newer work shows AI feedback loops can alter human perceptual interpretations; and HRI studies in healthcare and eldercare highlight privacy, autonomy, and dependency concerns for vulnerable populations. \textbf{Open gaps and directions:} team-level fairness tests rather than model-only fairness tests, participatory design with affected communities, dynamic harm audits, and safeguards against manipulative or dependency-forming robot behavior. \textbf{Representative refs:} UNESCO (2021), National Academies (2022), Alon-Barkat and Busuioc (2023), Glickman et al. (2025), Jayaraman et al. (2024), Hung et al. (2025). \sourcemark{12}}
+
+\section*{Domain and stakeholder mapping}
+
+The matrix below is a synthesis of the literature above. ``H'' means high salience; ``M'' means meaningful but usually secondary. In co-creation, the ``user'' and ``operator'' are often the same person, but I keep them separate for consistency. \sourcemark{13}
+
+{\footnotesize
+\begin{longtable}{@{}p{0.26\linewidth}>{\centering\arraybackslash}p{0.06\linewidth}>{\centering\arraybackslash}p{0.072\linewidth}>{\centering\arraybackslash}p{0.052\linewidth}>{\centering\arraybackslash}p{0.083\linewidth}>{\centering\arraybackslash}p{0.064\linewidth}>{\centering\arraybackslash}p{0.079\linewidth}>{\centering\arraybackslash}p{0.075\linewidth}>{\centering\arraybackslash}p{0.083\linewidth}@{}}
+\toprule
+Problem & HMT & \makecell{Co-\\creation} & HRI & \makecell{General\\multiagent} & Users & Operators & Designers & Regulators \\
+\midrule
+\endfirsthead
+\toprule
+Problem & HMT & \makecell{Co-\\creation} & HRI & \makecell{General\\multiagent} & Users & Operators & Designers & Regulators \\
+\midrule
+\endhead
+Safety assurance & H & M & H & H & H & H & H & H \\
+\midrule
+Common ground and intent alignment & H & H & H & H & H & H & H & M \\
+\midrule
+Open-team coordination and generalization & H & M & H & H & M & H & H & M \\
+\midrule
+Trust calibration and controllability & H & H & H & M & H & H & H & M \\
+\midrule
+Agency, workload, and skill retention & H & H & H & M & H & H & H & M \\
+\midrule
+Evaluation and reproducibility & H & H & H & H & M & M & H & M \\
+\midrule
+Governance, privacy, IP, and liability & H & H & H & H & H & H & H & H \\
+\midrule
+Bias, values, and vulnerable-user harms & H & H & H & H & H & M & H & H \\
+\bottomrule
+\end{longtable}
+}
+
+\section*{Recent milestones and problem interdependencies}
+
+The timeline shows how the field moved from accident- and sociology-driven warning signs toward specific benchmarks, standards, and governance instruments. The milestones are representative rather than exhaustive. \sourcemark{14}
+
+\begin{center}
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[font=\sffamily\scriptsize,>=Stealth]
+  \node[font=\sffamily\bfseries\small] at (8.0,4.85) {Milestones shaping HMT, co-creation, HRI, and multiagent systems};
+  \draw[->,line width=0.8pt] (-0.35,3.65) -- (16.55,3.65);
+  \foreach \x/\yr/\txt in {
+    0/2018/{Uber ADS crash in\\Tempe exposes\\handoff, oversight,\\and safety-culture\\failures},
+    2/2019/{Rahwan et al.\\formalize ``machine\\behaviour''},
+    4/2021/{Dafoe et al. argue\\for Cooperative AI\\and common\\ground},
+    6/2022/{National Academies\\consolidate HMT\\research needs},
+    8/2023/{SMACv2 highlights\\benchmark\\insufficiency for\\closed-loop MARL\\coordination},
+    10/2024/{BenchMARL targets\\reproducibility;\\LangGround\\targets\\human-interpretable\\agent\\communication},
+    12/2024/{NIST GenAI Profile\\and U.S.\\accountability\\guidance push\\lifecycle risk\\management},
+    14/2025/{USCO AI copyright\\reports and revised\\robot-safety\\standards sharpen\\governance\\questions},
+    16/2026/{Common-ground\\benchmark and\\JaxAHT target\\human-AI\\collaboration and\\ad hoc teamwork\\evaluation}
+  }{
+    \node[fill=black!25,minimum width=1.28cm,minimum height=0.43cm,font=\sffamily\bfseries\tiny] at (\x,4.1) {\yr};
+    \draw[densely dotted,black!60] (\x,3.92) -- (\x,2.64);
+    \node[draw=black!28,fill=black!10,align=center,text width=1.72cm,inner sep=2.6pt,minimum height=1.2cm,font=\sffamily\tiny] at (\x,1.95) {\txt};
+  }
+\end{tikzpicture}%
+}
+\end{center}
+
+These problems are tightly coupled. Weak benchmarking hides coordination failures; hidden failures distort trust; distorted trust worsens over- or under-reliance; poor role design accelerates deskilling; and governance ambiguity reduces incident learning and constrains deployment. This interaction pattern is one reason the field needs joint technical--human--organizational research rather than isolated algorithmic fixes. \sourcemark{15}
+
+\begin{center}
+\resizebox{0.92\linewidth}{!}{%
+\begin{tikzpicture}[
+  font=\sffamily\scriptsize,
+  >=Stealth,
+  box/.style={draw=black!28,fill=white,align=center,text width=2.95cm,minimum height=0.78cm,inner sep=3pt},
+  arr/.style={->,line width=0.65pt,black!75}
+]
+  \node[box] (open) at (0,4.20) {Open-world coordination\\limits};
+  \node[box] (cg) at (0,3.05) {Common-ground failures};
+  \node[box] (handoff) at (0,1.88) {Poor handoffs and mode\\confusion};
+
+  \node[box] (bias) at (6.15,5.15) {Bias, privacy, IP, and\\liability issues};
+  \node[box] (legit) at (3.95,4.20) {Low legitimacy and\\constrained deployment};
+  \node[box] (bench) at (3.95,3.00) {Weak benchmarks and\\low reproducibility};
+  \node[box] (hidden) at (3.95,1.90) {Hidden capability gaps};
+  \node[box] (trust) at (3.95,0.76) {Trust miscalibration};
+  \node[box] (rely) at (3.95,-0.38) {Over- or under-reliance};
+
+  \node[box] (role) at (7.90,3.05) {Poor role design};
+  \node[box,text width=3.15cm] (work) at (7.90,1.88) {Workload imbalance\\and deskilling};
+  \node[box,text width=3.15cm] (safety) at (7.05,-1.45) {Safety and performance\\failures};
+
+  \draw[arr] (open) -- (cg);
+  \draw[arr] (cg) -- (handoff);
+  \draw[arr] (legit) -- (bench);
+  \draw[arr] (bench) -- (hidden);
+  \draw[arr] (hidden) -- (trust);
+  \draw[arr] (trust) -- (rely);
+  \draw[arr] (role) -- (work);
+  \draw[arr] (bias.west) to[out=200,in=72] (legit.north);
+  \draw[arr] (handoff.south) to[out=-76,in=185] (trust.west);
+  \draw[arr] (work.south) to[out=-72,in=0] (trust.east);
+  \draw[arr] (rely.south) to[out=-90,in=195] (safety.west);
+  \draw[arr] (bias.east) to[out=-10,in=85] (safety.north east);
+
+  \begin{scope}[on background layer]
+    \node[draw=black!22,rounded corners=2pt,fit=(open)(cg)(handoff)(bias)(legit)(bench)(hidden)(trust)(rely)(role)(work)(safety),inner sep=7mm] {};
+  \end{scope}
+\end{tikzpicture}%
+}
+\end{center}
+
+\section*{Selected primary-source URLs}
+
+A compact list of primary or official sources discussed above, with URLs included in code format.
+
+\begin{itemize}
+\item Rahwan et al. (2019), \emph{Machine behaviour} --- \url{https://www.nature.com/articles/s41586-019-1138-y}
+\item Dafoe et al. (2021), \emph{Cooperative AI: machines must learn to find common ground} --- \url{https://doi.org/10.1038/d41586-021-01170-0}
+\item National Academies (2022), \emph{Human-AI Teaming: State-of-the-Art and Research Needs} --- \url{https://doi.org/10.17226/26355}
+\item NTSB, \emph{Collision Between Vehicle Controlled by Developmental Automated Driving System and Pedestrian} --- \url{https://www.ntsb.gov/investigations/Pages/HWY18MH010.aspx}
+\item NIST (2024), \emph{Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile} --- \url{https://doi.org/10.6028/NIST.AI.600-1}
+\item NTIA (2024), \emph{Artificial Intelligence Accountability Policy Report} --- \url{https://www.ntia.gov/sites/default/files/publications/ntia-ai-report-final.pdf}
+\item Bettini et al. (2024), \emph{BenchMARL} --- \url{https://www.jmlr.org/papers/v25/23-1612.html}
+\item Li et al. (2024), \emph{Language Grounded Multi-agent Reinforcement Learning with Human-interpretable Communication} --- \url{https://proceedings.neurips.cc/paper_files/paper/2024/file/a06e129e01e0d2ef853e9ff67b911360-Paper-Conference.pdf}
+\item Wang et al. (2024), \emph{N-Agent Ad Hoc Teamwork} --- \url{https://arxiv.org/abs/2404.10740}
+\item McGuire et al. (2024), \emph{Establishing the importance of co-creation and self-efficacy in creative collaboration with artificial intelligence} --- \url{https://doi.org/10.1038/s41598-024-69423-2}
+\item U.S. Copyright Office, \emph{Copyright and Artificial Intelligence} --- \url{https://www.copyright.gov/ai/}
+\item European Commission, \emph{AI Act} --- \url{https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai}
+\item Poelitz et al. (2026), \emph{A Benchmark to Assess Common Ground in Human-AI Collaboration} --- \url{https://arxiv.org/abs/2602.21337}
+\item Wang et al. (2026), \emph{JaxAHT} --- \url{https://openreview.net/pdf?id=DkZ2IEBpH1}
+\item A3, \emph{ANSI/A3 R15.06-2025} --- \url{https://www.automate.org/robotics/standards/robot-standard-r15-06-2025-available-purchase}
+\item UNESCO, \emph{Recommendation on the Ethics of Artificial Intelligence} --- \url{https://www.unesco.org/en/ethics-ai/en/recommendation-ethics}
+\end{itemize}
+
+\bigskip
+\hrule
+\bigskip
+
+\sourceitem{1}{https://www.nature.com/articles/s41586-019-1138-y}
+\sourceitem{2}{https://www.science.org/doi/10.1126/sciadv.adn5290}
+\sourceitem{3}{https://arxiv.org/abs/2409.17348}
+\sourceitem{4}{https://academic.oup.com/pnasnexus/article/5/3/pgag030/8490283}
+\sourceitem{5,14}{https://www.ntsb.gov/investigations/Pages/HWY18MH010.aspx}
+\sourceitem{6}{https://www.nationalacademies.org/read/26355/chapter/6}
+\sourceitem{7}{https://pubmed.ncbi.nlm.nih.gov/33947992/}
+\sourceitem{8}{https://www.nationalacademies.org/read/26355/chapter/7}
+\sourceitem{9,15}{https://www.nationalacademies.org/read/26355/chapter/8}
+\sourceitem{10}{https://www.jmlr.org/papers/volume25/23-1612/23-1612.pdf}
+\sourceitem{11}{https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence}
+\sourceitem{12}{https://www.unesco.org/en/ethics-ai/en/recommendation-ethics}
+\sourceitem{13}{https://www.nationalacademies.org/read/26355}
+
+\end{document}
+
 Here are my comments to my PhD Advisor I sent for my research directional focus:
 
 TL;DR: Extend symbol grounding to control by introducing feasibility as an explicit layer between perception and action, and use model-based planning for constraint-consistent execution.
