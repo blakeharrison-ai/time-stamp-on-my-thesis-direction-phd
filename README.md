@@ -2,6 +2,8 @@
 
 Thesis statement:
 
+Model-based RL → vision-language-grounded MPC → extended to multi-agent teams via compositional causal world models and composable admissibility constraints. Validated in game AI (composition at team scale), dyadic human-machine teaming on mobile manipulation/navigation (admissibility with an uncontrolled teammate), and procedural content generation (isolating the composition property).
+
 Compositionality, Emergence, and Self-Organization within Safe RL (offline-to-online, MPC-based constrained MARL/MAP).
 My methodological stance is that in multiagent planning and MARL the right simplification is structural, not reductive: rather than simplify away partial observability, non-stationarity, long horizons, distribution shift, or strategic interaction, I seek the local mechanisms that make global coordination composable — a compositional analogue of scaling laws, in which complexity grows gracefully with the number of agents, tasks, and environments. Concretely, the thesis — the hypothesis I am currently working toward — is:
 
