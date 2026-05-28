@@ -12,6 +12,28 @@ More technical version:
 
 A team of embodied agents behaves admissibly when its joint belief-conditioned trajectory remains within a specified set of acceptable team-level outcomes — including task satisfaction, natural language or communicated commands, constrained belief flow, intent alignment, and safety specifications — throughout an extended horizon and under distribution shift. This thesis argues that confinement to the support of the training-behavior distribution is neither necessary nor sufficient for admissibility so defined: agents may satisfy the specification while acting outside that support, and may violate it while remaining within it. I therefore treat admissibility as a property to be constructed rather than inherited from data coverage, and derive sufficient conditions under which the local admissibility of individual agents, composed through a small set of local interaction mechanisms — topological belief graphs, relational fields, emergent grammars, and self-organization rules — implies global team admissibility under explicit decomposability and bounded-interaction assumptions. To realize these conditions, each engineered agent is trained by self-play and model-based self-improvement, using imagined rollouts in a learned world model to evaluate contract-compatible futures beyond the empirical support, and transitions from offline reinforcement learning to online, receding-horizon model-predictive control; admissibility is thus maintained by planning over trajectories that extend beyond the data while satisfying local admissibility contracts, rather than by remaining within the data. I evaluate the resulting teams on game AI and on multi-robot navigation and manipulation, extend the analysis to human-machine co-creation — where admissibility must be maintained, or violations detected, under an exogenous teammate the framework does not directly constrain — and isolate the composition property in a controlled procedural-generation setting that removes embodiment and perception confounds.
 
+Told my advisor:
+
+Just FYI — I'm framing the work around multi-agent Human–Machine Teaming, since it seems to be the strongest long-term research direction and gives the experiments a clearer organizing structure.
+
+Going back through my partial drafts from the past couple of years, I've consolidated them under a single organizing idea — team admissibility — that threads through intent alignment, safety, and vision-and-language multiagent cooperation, now connecting around ten works (I have specific gap and proposed framework they all focus on concerning admissibility but it's easier to share with the drafts). My immediate focus is one paper at a time, starting with the WACV work and the CSUR survey. WACV Round 1 is my ideal near-term target (the Round 1 deadline looks to be around mid-July), with Round 2 in the early fall as a backup, depending on results and collaborator feedback.
+
+Mostly just focused on experiments and refining those drafts now over summer through next spring (there are 5+the survey). Plan on sending out drafts to collaborators as experiments are there and they are ready for feedback. (edited) 
+Blake Harrison  [6:05 PM]
+It looks like the lineage I’ve followed is model-based RL → vision-language-grounded MPC, so my cleanest baselines are VLAs (the paradigm) and in-family world-model MPC like VLMPC and GWM-MPC (the real contribution comparison), with VLM ablations as motivation. My method is VLM + world-model MPC, with the compositional-causal world model and composable admissibility as the novelty. Framing it this way keeps a much cleaner community narrative and grounds my terminology in a single community.
+Blake Harrison  [6:17 PM]
+VLM pretrained or Peft tuned + my novelty* + MPC. Not generic:
+
+Vision-language-grounded world-model MPC for embodied agents, using self-organized local-to-global admissibility constraints to improve robust long-horizon planning under distribution shift.
+
+I use multiagent dreaming to emerge a grammar that connects to general ASP framing so that grounding is done via dreaming (imagination during self play). That's the paper I have been working on all term. The framing was really difficult to get right.
+
+Composition (local-to-global) constraint adherence, self organization (eg electrodynamics, multiagent, swarms), admissibility (viability, feasibility, reachability, repair) = better intent alignment (NL command following) + safety measured via VLA benchmarks like RoboCasa, with VLM/component ablations, hard constraints via PCG tests (like Sudoku and Minecraft benchmarks), and narrative framing is easy to explain HMT dyadic (dynamic and adaptive new human commands or interactions with single agent) and future work extends clean to multiagent (what I meant by belief flow POSG extensions). That's the path I have been trying to fit.
+
+Makes sense the community like Sergey Levine moved from Offline RL -> VLAs. VLM+MPC just become a thing. So I have a clean history of methods to visualize in my survey also.
+
+Anyways just wanted to give you high level before sharing my experiment results soon and how it connects to survey. (edited)
+
 \documentclass[10pt,letterpaper]{article}
 
 % Generic Overleaf / pdfLaTeX-compatible preamble.
