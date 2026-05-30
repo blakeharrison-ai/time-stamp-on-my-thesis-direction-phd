@@ -2,6 +2,35 @@
 
 Thesis statement:
 
+Subject: Research framing: embodied open-endedness, world simulation, and VLM/VLA evaluation
+
+Hi Professor [Name],
+
+I wanted to share a clearer framing for the survey paper and the WACV / AIIDE / ICLR line of work.
+
+The umbrella term I am converging on is open-endedness, with the more specific sub-area being embodied open-endedness. The concepts I have been circling around — automatic curricula, co-evolution, curiosity, imagination, memory, world models, and learned/hybrid simulators — all fit more cleanly under that framing.
+
+My current thesis is that world simulators can serve two connected roles for embodied AI and foundation models:
+
+1. Evaluation: build hybrid learned evaluation environments for VLMs / VLAs, similar in spirit to MineDojo, but focused more directly on modern embodied foundation models. The goal would be to expose long-horizon planning failures, hallucination, weak grounding, constraint violations, and robustness gaps.
+2. Improvement: use world simulation inside imagination / dreaming / memory-augmented learning loops. This connects to Dyna-style methods, active inference / imagination-based learning, curiosity-driven exploration, and model-predictive or ADP-style online optimization. The longer-term direction is to use these mechanisms to generate better latent exploration, better imagined rollouts, and eventually more reliable constraint-aware behavior.
+
+The practical reason this direction feels unusually strong for me is that it also aligns with what I am building professionally through Here Be Giants. The company is effectively a world simulation company: generating large-scale synthetic environments and production-grade simulation assets, with overlap between training simulators, embodied AI environments, game-engine infrastructure, and VFX tooling. I am already doing a scaled production version of this work through my own AA-scale engine work and Unreal-based simulation pipeline. That gives me a concrete systems substrate rather than only a conceptual research direction.
+
+This also clarified something important for me methodologically. I have been thinking too much in terms of maximal systems. I now understand the research process more cleanly as making minimal, testable claims, identifying precise gaps, and validating each step empirically, mathematically, or through prior work. So instead of trying to prove the entire world-simulation vision at once, I want to decompose it into smaller claims that can support a coherent PhD trajectory and a series of publishable papers.
+
+My rough mapping is:
+
+* Survey paper: open-endedness / embodied open-endedness taxonomy.
+* WACV: hybrid learned evaluation for VLMs / VLAs and long-horizon embodied failure modes.
+* AIIDE: procedural / simulated world generation as an open-ended curriculum and evaluation substrate.
+* ICLR: imagination, memory, world simulation, and control/planning as a learning architecture.
+
+I spoke with Josh and am aiming to get first early empirical results out this week. After one polish pass, I will send you the WACV draft. I think the first round may still be possible, but the second round is the safer target.
+
+Best,
+Blake
+
 Model-based RL → vision-language-grounded MPC → extended to multi-agent teams via compositional causal world models and composable admissibility constraints. Validated in game AI (composition at team scale), dyadic human-machine teaming on mobile manipulation/navigation (admissibility with an uncontrolled teammate), and procedural content generation (isolating the composition property).
 
 Compositionality, Emergence, and Self-Organization within Safe RL (offline-to-online, MPC-based constrained MARL/MAP).
