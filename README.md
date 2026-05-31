@@ -4,6 +4,30 @@ Can open-ended learning + memory + imagination make language-guided long horizon
 
 Thesis statement:
 
+Here is my final direction I told my PhD advisor:
+
+I realized this week that I have been maximizing systems when I need to think in terms of core claims, clear gaps, and minimal contributions with maximal yield — claims I can defend with references, empirical evidence, or math.
+
+My current view is that CoCa-MPC is best positioned for RA-L → ICRA. I am narrowing it around one core problem gap: behavioral support does not entail admissibility, and admissibility does not entail behavioral support, especially under OOD/distribution shift. My plan is to build the paper around a single proof of that gap plus a small robotics simulation experiment this weekend, then share it with Josh for a first round of revision.
+
+I also realized that what I was calling language-guided co-creation is more of an application domain than the core technical identity of the work. My actual communities are model-based RL/MPC — especially the offline RL or evolutionary-algorithms-to-online ADP/MPC line — open-endedness, and embodied AI / robot learning, specifically embodied open-endedness.
+The thesis-level question I am converging on is:
+Can certified semantic imagination enable language-guided embodied agents to achieve robust, diverse, constraint-respecting long-horizon generalization under OOD/distribution shift, while mitigating negative transfer, hallucinated futures, and compounding model error?
+By certified semantic imagination, I mean admissibility-gated, language-guided world-model planning sourced by open-ended semantic frontier generation — including semantic autocurricula, multiagent emergence, co-evolution through world-model/agent self-play and self-improvement, curiosity, and self-organization within imagination and offline blending — recomposed from structured memory, and committed to action through robust MPC.
+
+This is the single axis that I think everything I am working on fits under. I can measure it through modified embodied simulators, VLA/VLM+MPC benchmarks — including OOD benchmark performance, negative-transfer measures, safety compliance, language-command following, hallucination rate, compounding model-error effects, and long-horizon success — and PCG-style settings where constraints and diversity are clear empirical wins.
+
+It can also be framed two ways: first, as improved agents through learned world-simulator imagination plus memory; second, as hybrid learned/externalized world simulators for validating existing VLA/VLM+MPC agents. I have the ICLR, WACV Round 2, AIIDE, RA-L → ICRA, and CSUR survey narratives updating along this line.
+
+I am also changing my workflow to a quick single-claim + proof + experiment iteration mode, so I should be able to show convergence more regularly and quickly. This week I am sharing the narrowed CoCa-MPC version with Josh, and after I get his revisions I will share it with you.
+
+
+
+----
+These were prior concepts or mechanisms supporting this leading up to it:
+
+Language ground and symbol grounding also
+
 Subject: Research framing: embodied open-endedness, world simulation, and VLM/VLA evaluation
 
 Hi Professor [Name],
