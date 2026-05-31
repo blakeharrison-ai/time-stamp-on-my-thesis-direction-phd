@@ -1,4 +1,6 @@
 # time-stamp-on-my-thesis-direction-phd
+Question:
+Can open-ended learning + memory + imagination make language-guided long horizon embodied model predictive control (planning) robust to OOD?
 
 Thesis statement:
 
