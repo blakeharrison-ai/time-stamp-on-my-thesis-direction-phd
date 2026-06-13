@@ -1,4 +1,10 @@
 # time-stamp-on-my-thesis-direction-phd
+
+AANd I finally understand my research direction / community now..
+
+Open Ended Learning for Object-Centric Embodied Agents using Interactive World Generators
+
+
 Question:
 Can open-ended learning + memory + imagination make language-guided long horizon embodied model predictive control (planning) robust to OOD?
 
