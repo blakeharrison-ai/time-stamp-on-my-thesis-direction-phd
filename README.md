@@ -20,7 +20,107 @@ The follow up thrice papers are:
 
 Computational biology/chemistry is naturally on my radar using a "Periodic table" of grammars predefined with lose coupling similar to HTNs + GOAP using ASP. These are more structural adaptions of the principled concept. I am also exploring electrodynamics in principle, reaction-diffusion, hodges decomposition, etc. as self organization / symmetry correspondence and breaking mechanisms as well as improved curiosity/novelty mechanisms for improved frontier graph construction. The real area I want to dive deeper into though is curriculum generation and adaptive learning online through self play and self improvement. I believe that is how we can get to truly self reflexive systems and emergence that is safe/preference and constraint aligned and interesting (i.e. more diverse and dense in terms of diversity and online adaptive procedural worlds that are long horizon physically consistent).
 
+Right — the top-level research direction and three subdirections are:
+Top Research Direction
+Online Adaptive Embodied AI Open-Endedness
+Object-centric world simulators, embodied agents, admissibility mechanisms, memory systems, language/grammar grounding, and multiagent social structures adapt online to expand robust embodied competence beyond behavioral support.
+Concrete SOLA-MPC spine:
+world simulators propose
+→ intrinsic motivation / memory prioritizes
+→ admissibility certificates authorize
+→ MPC executes
+→ frontier ledger updates support
+→ agents, worlds, grammars, and simulators improve online
+Three Subdirections
+1. Object-Centric Interactive World Simulators, Coevolution, Self-Play, and Self-Improvement
+Worlds, agents, object ontologies, affordances, relations, interventions, and simulators co-evolve through object-centric procedural imagination, self-play, and online self-improvement.
+Includes:
+object discovery
+object ontology formation
+affordance learning
+scene graphs / object graphs
+relation graphs
+interactive world simulators
+procedural world generation
+world-agent coevolution
+multiagent emergence
+self-play
+simulator self-improvement
+emergent object societies
+social communication contract emergence
+VLM/VLA grounding
+game AI / robotics / PCG simulators
+Core question:
+How do object-centric simulators generate new worlds, tasks, relations, affordances, interventions, agents, and social/communication structures that co-evolve with embodied learners?
+
+2. Admissible Open-Ended Frontier Discovery, Autocurricula, UED, and Procedural Imagination
+POET / PAIRED / ACCEL-style environment and task generation, reframed around admissible frontier growth rather than only novelty, regret, or learning progress.
+Includes:
+UED
+POET
+PAIRED
+ACCEL
+PLR
+minimal criterion learning
+quality diversity
+novelty search
+procedural imagination
+graph grammars
+WFC
+L-systems
+ASP-constrained generation
+grammar grounding
+language grounding
+certificate-gated curricula
+support-growth frontier
+online frontier ledger
+offline-to-online MPC
+Core question:
+Which generated worlds, tasks, relations, interventions, plans, and communication/grammar structures are admissible enough to enter the autocurriculum or MPC control loop?
+Key claim:
+Admissibility is the minimal criterion for open-ended embodied frontier growth.
+
+3. Intrinsic Motivation, Curiosity, Memory Retrieval, and Self-Organizing Representations for Robust Embodied Generalization
+Intrinsic motivation and memory decide which admissible frontiers are interesting, useful, novel, learnable, recoverable, worth revisiting, or worth rejecting.
+Includes:
+intrinsic motivation
+curiosity
+learning progress
+novelty
+uncertainty
+memory retrieval
+frontier memory
+episodic memory
+rejection memory
+support buffer
+graph memory
+GTrXL / Transformer-XL
+Mamba / SSM retention
+retrieval-augmented memory
+self-organization
+symmetry breaking
+correspondence learning
+local-to-global composition
+Hodge decomposition
+energy-based formulations
+field / electrodynamics correspondence
+grammar and language grounding
+multiagent communication memory
+social contract memory
+Core question:
+How do embodied agents prioritize, remember, retrieve, repair, and generalize from admissible frontier experiences over long online deployment?
+One-Sentence Synthesis
+My research studies Online Adaptive Embodied AI Open-Endedness: object-centric world simulators generate evolving worlds, tasks, agents, relations, affordances, interventions, grammars, and social communication contracts; admissibility-gated frontier discovery decides what may enter the autocurriculum or MPC loop; and intrinsic motivation plus frontier memory drives robust embodied generalization through self-organizing, local-to-global representations.
+
+
+
+
+
+
 I have studied SSM (Mamba 2) + GTxRL and other transformer architectures as a history log memory but feel extended forms of memory (e.g. transformer + neural turing machines NTMs), in conjunction with admissible emergence is going to yield ever expansive semi-autonomous systems.
+
+
+
 
 My second
 
