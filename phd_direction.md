@@ -1,3 +1,12 @@
+A normal emergence question asks:
+How does global structure emerge from local interactions?
+
+The question I am trying to answer is:
+How does global structure emerge from local interactions without violating global constraints?
+
+My stack was near this but I needed a way to do symbol grounding to continuous. That way is abductive learning (ABL and APL). ASP can also be used directly as ABL and there is a python kit out now from APL. That enables me to construct a scene graph for perception and do the causal grounding I need for a new form of Unsupervised Environment Design Imagination online and adaptive. This is with self play and self organization is the path to a fully reflexive system.
+
+
 PhD direction papers and survey for thesis:
 
 One key major difference is that my method keeps domain constraints constant while generatively grows the frontier online adaptively under admissibility constraints (that are also updated on slower cadence online) during online rollout optimization.
