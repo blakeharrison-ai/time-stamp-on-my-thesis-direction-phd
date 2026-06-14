@@ -12,6 +12,35 @@ My second paper is in "Math Representation Models". When building my own game en
 
 I also see admissibility as local-to-global composition (I got the term composition from chatgpt but I was calling it local-to-global coherence prior). The idea is not only composition of hierarchies but in my definition local rules that self organize into global admissibility defined by ASP or language in general. Or possibly even itself constract language emergent. That is an area of multiagent systems I am beginning to look more into now.
 
+Made firm commitment to advisor:
+
+Going bottom up + survey I have come to realize I am working on embodied openendedness. I read POET and the most recent ACCEL papers on autocurriculum and have a better grounding there.
+
+The question I have been trying to answer is this:
+Instead of what emergence asks (e.g. emergent procedural imagination): How is global structure able to emerge from local self organization (composition e.g. symmetry breaking, flocking, unique unforeseen complex higher order combinations of local rules, etc.)?
+
+I have been trying to solve:
+How does global structure emerge from local self organization without violating global constraints or limiting the coverage of emergence (especially online and dynamic OOD)?
+
+
+
+I think however, I figured out how to respond in turn to the question now.
+
+I compiled all of my strongest concepts into 3 potential publications (and from there I am rewriting everything bottom up):
+
+
+SOLA-MPC (cooler named CoCa-MPC) | a new autocurricula/UED style method for ICRA that directly solves the question using my system, which includes abductive learning + MPC and multiagent counterfactual imagination for emergence
+Contractual Active-Matter Frontier Memory for Open-Ended Embodied Exploration | my long time coming intrinsic motivation work for ICLR
+UIB: Universe in a Bottle | It is math representation models using inverse procedural generation and then meta adaption via procedural imagination as heavy hitting paper for WACV or CVPR
+
+
+My WIP CSUR survey: From Objects to Worlds: Object-Centric Interactive World Simulators for Open-Ended Embodied Agents
+
+Just wanted to give you heads up so you weren't blindsided these are works results I am bringing for July + hard targets. I also have been in communication with Varun and both him and Josh are waiting to give feedback. Chitta also was interested in #1 (he told me to send him draft after the whole free Gibbs energy concept become something) and Ben Zhou as new reasoning faculty may be interested as well. I think lots of folks will be interested in these but I need to write up clean and make sure the experiments are solid. (edited) 
+Blake Harrison  [11:45 AM]
+I'll share draft / results for #1 next week and am pushing to have full drafts for 1 and 2 by July meet alongside survey draft and hopefully early improvement results for #3 also by then.
+
+
 The follow up thrice papers are:
 
 1. Extending SOLA-MPC to belief flow formulation and extended use
