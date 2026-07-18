@@ -1,5 +1,16 @@
 # time-stamp-on-my-thesis-direction-phd
 
+my first paper concept:
+
+Offline-to-online embodied long-horizon task-and-motion planning must generalize from a parent domain to unseen sibling and child domains and tasks despite changes in objects, relations, observations, configurations, constraints, and disturbances. Although each family shares a structurally invariant causal transition law, existing methods regularize toward offline support density, which neither identifies causal roles nor establishes admissibility -- feasibility, constraint validity, reachability, and repairability -- under latent causal dynamics. This suppresses online generalization or causes compounding error under distribution shift. We introduce Counterfactual Imagination Control (CiC), pronounced “kick,” which treats admissibility as optimal-transport mass induced by the shared parent law rather than proximity to associative support. Its receding-horizon realization, Counterfactual Abductive Imagination Model Predictive Control (CAI-MPC), learns abductive closure over interventionally sampled offline futures. An abductive head estimates transport-admissibility mass through inverse counterfactual imagination, while self-organizing fractal noise seeds plausible lookahead. CiC also learns a multi-behavior value functional over a hierarchical object-centric Bayesian factor graph. Online, CAI-MPC accepts, probes, suffix-repairs, or rejects trajectories within a mechanism-level transport trust region, then ranks admissible, behaviorally diverse futures using a multi-component Gibbs energy. Across Isaac Lab, RoboCasa365, Meta-World+, and OGBench, CAI-MPC reduces constraint violations by […], improves instruction-conditioned success by […], and increases disturbance recovery by […] over strong baselines.
+
+I am studying identification and correspondence in open-ended learning
+offline-to-online and in addition to UED, coverage and causal admissibility as identification mechanisms I am also exploring:
+
+https://gmail.app.goo.gl/?link=https://mail.google.com&isi=422689480&ibi=com.google.Gmail&ct=sp-stn-b-1&mt=8&pt=9008&cid=6382299652459406484&_fpb=COoGEJIDGgVlbi1VUw==&_cpt=cpit&_iumenbl=1&_iumchkactval=1&_plt=596&_uit=1003&_cpb=1&_fpb=COoGEJIDGgVlbi1VUw==&_cpt=cpit&_iumenbl=
+
+
+
 One key major difference is that my method keeps domain constraints constant while generatively grows the frontier online adaptively under admissibility constraints (that are also updated on slower cadence online) during online rollout optimization.
 
 My first paper concept is: Admissibility-Gated Object-Centric Frontier Discovery and Open-Ended Autocurriculum Growth
