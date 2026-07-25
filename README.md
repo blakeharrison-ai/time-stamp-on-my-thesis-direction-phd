@@ -1,5 +1,73 @@
 # time-stamp-on-my-thesis-direction-phd
 
+Here are my projects I declared in my semester target document shared with my advisor and APG core-phd group, and I will be sharing with collaborators Josh Feinglass and Varun Jammal this weekend (Varun) and this coming week (Josh). Targets are for this coming 2026 (2027 publication deadline cycles).
+
+Title: From World Models to Creative Openended Multi-Agent Inverse Hybrid Neural Differentiable World Simulators
+
+Lead author: Blake Harrison
+
+Abstract: At SIGGRAPH will post this weekend
+
+Target venue: CSUR Journal Survey
+
+—
+
+Title: Beyond Offline Behavioral Support: Learning Admissible Transport Mass through Multi-Agent Interventions for Embodied MPC
+
+Lead author: Blake Harrison
+
+Abstract:
+
+Offline-to-online embodied control must generalize beyond offline support under distribution shift, partial observability, and long horizons. Existing methods construct behavior-proximity trust regions before assessing feasibility, constraints, reachability, and recoverability -- conflating novelty with inadmissibility, misidentifying the transported admissible support, and forcing online generate-and-test filtering. Instead, we observe that causal mechanisms are invariant across domains, and model sibling domains and tasks as interventional configurations of a shared learned structural causal world model (SCWM). Causal Admissibility via Structural Transport (CAST) defines admissibility as SCWM-constrained optimal-transport mass between sibling transition occupancies; this support -- not behavior-policy density -- forms the online trust region. CAST-MPC learns object-centric latent dynamics with an SCWM represented as a parameterized dynamic Bayesian factor graph. Under local constraints, decentralized agents self-organize to select symmetry-breaking interventions, generating quality-diverse admissible rollouts through self-play and co-play. Online during infinite receding-horizon planning, CAST-MPC instantiates an approximate dynamic programming (ADP) Gibbs-energy quality diverse multi-objective composite value function-based MPPI controller over the transported admissible support. An amortized inverse causal dynamics predictor abduces exogenous experience transport mass membership -- accepting, repairing infeasible suffixes and rejecting unsupported rollouts in a single forward pass, without costly online deductive solving or post-hoc verification. Under unseen environment and task distribution shift, and partial observability across embodied simulators: IsaacLab, RoboCasa, MetaWorld+, OGBench, and Newton, CAST-MPC reduces constraint violations, improves instruction following and disturbance-recovery success, and task performance over strong baselines.
+
+Target venue: ICRA
+
+—
+
+Title: Daydreaming with Creative Regret Minimization: Phase-Separated Optimal Transport 
+Flow Matching for Robust Open-Ended Embodied Exploration
+
+Lead author: Blake Harrison
+
+Abstract: Open-ended exploration is continuous creative hypothesis design and as such embodied agents should construct creative-learning progress – behaviors, interventions, and representations enlarging what agents can learn, compose, and distinguish. Conversely, in order to escape the traps of unguided unpredictability and causally inert variation, existing methods must transition from methods that naively only reward raw prediction error, information gain or novelty to targeting creative-causal learning progress. We introduce \emph{Daydreaming with Creative Regret Minimization} (DCReM), which makes computational creativity the intrinsic objective, keeping behavioral phases completely separated, and only admitting admixture via value function multi-headed cross attention reweighting using neural fields updated via Counterfactual Imagination Control (CiC) reweighting. CiC updates neural fields to allow for causal conceptual admixture via fractal noise seeding, problem reformulation, strategy-space transformation, adjacent-possible expansion, serendipitous reuse, and minimal-witness synthesis – with each update preserving the clean phase-separation of induced behavioral and representation structural options over affordances neural grammars learned. A creative-value vector scores each construction on five axes: uncertainty reduction over an $\varepsilon$-decision-equivalence quotient, utility beyond the strongest parent, newly reachable strategy mass, compositional reuse, and capacity to construct future progress. Confidence-adjusted Pareto gain over this vector supplies the intrinsic return. Infeasible, invalid, unreachable or domain-task decision-irrelevant constructions earn none. Execution grounds the separated elastic elite archive – witnessed substitution regret splits phases and causally confirmed $\varepsilon$-equivalence merges them. Offline, normalizing flows trained by flow matching learn each phase's elite distribution as an optimal-transport flow whose HJB-dual potentials – viscosity solutions under vanishing entropic regularization – consolidate the neural fields that reweight the attention of the value function. Online, during exploration, one-step approximate dynamic programming (ADP) over the reweighted value function selects actions, each refined by two Newton steps in continuous action spaces (exact argmax where actions are discrete). In hindsight, CiC also scores unchosen constructors, but only execution revises the quotient. Contextual internal-regret minimization then reallocates exploration toward operators with the greatest foregone progress – regret schedules creativity rather than rewarding it. Under realizability, separability, witness coverage, and calibrated imagination, DCReM recovers the coarsest $\varepsilon$-valid quotient and achieves sublinear operator swap regret. Empirically, across Atari, ProcGen, Crafter, MineDojo, and IsaacLab, DCReM improves discovery of high-return, decision-inequivalent strategies, compositional transfer, and generalization robustness to aleatoric, visual, and causally irrelevant adversarial disturbances vs strong exploration bonus baselines.
+
+Target venue: ICLR
+
+—
+
+Title: Hyper-IWS: Partial-Identification-Aware Inverse Hybrid Hypergraph-Latent Energy World Simulators
+
+Lead author: Blake Harrison
+
+Abstract: Video world models power embodied planning and control, yet photorealism is not physics: implicit latents entangle credit assignment and encode no mechanism surviving intervention under feasibility or validity constraints, compounding in open-ended autocurricula demanding feasible, reachable, valid goals. We thus introduce Hyper-IWS, a hybrid inverse world simulation that combines tetrahedral splatting with a hypergraph object-construction hierarchy of energy basins mixed via cross-attention. Differentiable inverse rendering and inverse physics reconcile offline video with interactive interventional probing, reconstruction, and transform generation, updating what forward simulation and rendering should do during learning regimes. Inspired by realtime volume rendering, ray casting tetrahedron traversal yields exact segment stratification and sample-matched barycentric probes for scattering and transmittance extinction gradients. Finite video partially identifies dynamics, so an inverse energy landscape retains certified compatible basins with interval-valued flat directions, and decision-equivalence grounding exploits sub-tolerance combinations for online identification. When no basin fits belief below admissible thresholds, typed adequacy alarms certify class failure, not parameter error -- residuals localizing to geometry, dynamics, causal, or agent channels trigger ontology expansion, admitted only after type-checking, compilation, execution, and executor verification. Fine tuned via offline dreaming, deployed with differentiable Model Predictive Control (MPC) that leverages differentiable world simulation during online planning under uncertainty, Hyper-IWS improves long-horizon planning on a variety of embodied tasks including ManiSkill-HAB, Carla and IsaacLab under object-dynamics generalization, and extends to language-conditioned LIBERO; micro-basin recombination generalizes under partial occlusion and partial task acquisition. We further show reduction of imagination hallucination through extended horizon stress tests on Isaac Lab Newton and a path to reintegration back into the video generation process, showing generative generalization, as neural guidance through distillation on WorldScore, and show inverse procedural-program identification from rendered video via Infinigen-Sim.
+
+Target venue: CVPR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 NOTE to self, I shared concept generally with lab mate (Arpit) considering admissibility as transport mass. I mentioned I had paper I was working on and trust he isn't doing same work but may have spoken too loud and others in area may have heard. Masters students seem to scalp ideas. Hoping they respect in progress work though for ICRA.
 
 my first paper concept:
