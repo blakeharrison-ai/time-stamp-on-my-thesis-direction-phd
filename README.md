@@ -3,7 +3,7 @@
 Here are my projects I declared in my semester target document shared with my advisor and APG core-phd group, and I will be sharing with collaborators Josh Feinglass and Varun Jammal this weekend (Varun) and this coming week (Josh). Targets are for this coming 2026 (2027 publication deadline cycles).
 
 
-Title: From World Action Models to Object-Graph World-Language-Action Models for Hybrid World Simulation and Creative Emergence in Embodied AI: An Approximate Dynamic Programming Perspective
+Title: From World Models to Object-Graph World-Language-Action Models for Hybrid World Simulation and Creative Emergence in Embodied AI: An Approximate Dynamic Programming Perspective
 
 Lead author: Blake Harrison
 
