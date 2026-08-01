@@ -42,7 +42,7 @@ Target venue: ICRA
 
 —
 
-Title: Beyond Offline Behavioral Support: Learning Admissible Transport Mass in Language-Grounded Object-Graph World Action Models for Embodied MPC
+Title: Beyond Offline Behavioral Support: Learning Causally Admissible Transport Mass for Language-Grounded Object-Graph World Action Model Predictive Control
 
 Lead author: Blake Harrison
 
@@ -51,31 +51,7 @@ Abstract:
 Reinforcement-learning post-training can adapt world foundation models into World Action Models (WAMs), yet visual navigation and mobile manipulation must generalize beyond logs while satisfying feasibility, symbolic constraints, reachability, and recoverability under partial observability and long-horizon shift. We introduce Causal Admissibility via Structural Transport (CAST), which models sibling tasks and domains as interventions on a parent structural causal world model and learns a mechanism-constrained partial optimal-transport coupling between transition occupancies. The support and local mass of mechanism-consistent couplings – not behavior density proxy – define the curriculum and MPC trust region. CAST-MPC is a PEFT/RL-adapted, language-grounded object-hypergraph WAM conditioned on RGB-D scene graphs and knowledge priors. Self-/co-play blends multiagent causal interventional imagined rollouts to create instruction–trajectory pairs, train a latent adapter to frozen Gemma/DINO encoders, and populate a quality-diverse archive. Inverse procedural imagination samples hypergraph programs, simulates worlds, and reconstructs object–part structure, articulations, options, affordances, and causal mechanisms from partial trajectories, using inverse reinforcement learning, implicit tetrahedron factor graph construction (TFGC) and WFM priors. Newton re-simulation labels physical feasibility and Answer Set Programming (ASP) verifies encoded symbolic constraints amortizing them offline. Distilled admissibility signals and decision-weighted reconstruction progress induce an implicit autocurriculum. An inverse-abduction head estimates transport-tube membership, enabling online MPPI acceptance, suffix repair, or rejection. Experiments against offline-safe-RL, shielded-MPC, open-ended autocurriculum, WAM, and scene-graph baselines on robust generalization on Isaac Lab, Maniskill3-hab, MineDojo and controlled distribution shift ablations on Infinigen-Sim.
 Target venue: CVPR (Maybe ICLR)
 
-
-
-
-Here are my projects I declared in my semester target document shared with my advisor and APG core-phd group, and I will be sharing with collaborators Josh Feinglass and Varun Jammal this weekend (Varun) and this coming week (Josh). Targets are for this coming 2026 (2027 publication deadline cycles).
-
-
-Title: From World Models to Language-Grounded Object-Graph-Value World Action Models for Robust Generalization, Admissible Creative Emergence and Offline-to-Online Adaptive Hybrid World Simulation: An Approximate Dynamic Programming Perspective
-
-Lead author: Blake Harrison
-
-Abstract: World models learn predictive representations of latent environment dynamics under action interventions and are central to embodied learning, planning, and control. Yet research remains fragmented across latent-dynamics modeling, object-centric and graph-based representations, vision-language-action modeling, model-based reinforcement learning (MBRL), neural simulation, and model predictive control (MPC), separating prediction from language grounding, value learning, admissibility (feasibility, constraint validity, reachability, and recoverability), robust generalization, creative emergence, and online adaptation. Our approximate dynamic programming taxonomy traces the progression from world models to language-grounded Object-Graph-Value World Action Models across representation, action-conditioned dynamics, language grounding, cost and admissibility, value learning, policy-planner coupling, hybrid simulation, and offline-to-online adaptation. We examine how behavioral cloning, offline reinforcement learning, inverse reinforcement learning, reinforcement learning with verifiable rewards (RLVR), video generation, and logged-data augmentation support policy, value, and cost learning, while inverse identification of hybrid simulators recovers action-conditioned latent transition structure. We connect factor graphs, knowledge graphs, graph neural networks, and object-centric graphs with dense neural scene representations – including NeRFs and splat-based representations – and external differentiable simulators for abductive inference, interventional prediction, and counterfactual simulation. Under partial observability and distribution shift, these simulators support online adaptation through hybrid rollouts for imagination, planning, and control. We argue that robust generalization requires admissible creative emergence – novel, diverse, useful, and feasible behavior – and local-to-global composition of object graphs, policies, and value functions. We survey methods, simulators, protocols, and benchmarks for stationary manipulation, mobile manipulation, and navigation; identify open challenges in robust generalization, admissible creative emergence, and offline-to-online adaptive hybrid world simulation; and propose language-grounded Object-Graph-Value World Action Models as a unifying framework grounded in approximate dynamic programming. 
-
-Target venue: CSUR Journal Survey
-
-—
-
-Title: Beyond Offline Behavioral Support: Learning Admissible Transport Mass through Multi-Agent Interventions on Object-Centric Factor Graphs for Embodied MPC
-
-Lead author: Blake Harrison
-
-Abstract:
-
-Offline-to-online embodied control must generalize beyond offline support under distribution shift, partial observability, and long horizons. Existing methods construct behavior-proximity trust regions before assessing feasibility, constraints, reachability, and recoverability -- conflating novelty with inadmissibility, misidentifying the transported admissible support, and forcing online generate-and-test filtering. Instead, we observe that causal mechanisms are invariant across domains, and model sibling domains and tasks as interventional configurations of a shared learned structural causal world model (SCWM). Causal Admissibility via Structural Transport (CAST) defines admissibility as SCWM-constrained optimal-transport mass between sibling transition occupancies; this support -- not behavior-policy density -- forms the online trust region. CAST-MPC learns object-centric latent dynamics with an SCWM represented as a parameterized dynamic Bayesian factor graph. Under local constraints, decentralized agents self-organize to select symmetry-breaking interventions, generating quality-diverse admissible rollouts through self-play and co-play. Online during infinite receding-horizon planning, CAST-MPC instantiates an approximate dynamic programming (ADP) Gibbs-energy quality diverse multi-objective composite value function-based MPPI controller over the transported admissible support. An amortized inverse causal dynamics predictor abduces exogenous experience transport mass membership -- accepting, repairing infeasible suffixes and rejecting unsupported rollouts in a single forward pass, without costly online deductive solving or post-hoc verification. Under unseen environment and task distribution shift, and partial observability across embodied simulators: IsaacLab, RoboCasa, MetaWorld+, OGBench, and Newton, CAST-MPC reduces constraint violations, improves instruction following and disturbance-recovery success, and task performance over strong baselines.
-
-Target venue: ICRA
+above are what I shared with group prior to and today
 
 —
 
