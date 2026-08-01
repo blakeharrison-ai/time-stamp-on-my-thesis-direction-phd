@@ -1,5 +1,46 @@
 # time-stamp-on-my-thesis-direction-phd
 
+
+Here is my CSUR survey that combines everything I have been working on for years updated to modern terminology:
+
+Title: Object-Graph World Action Model Learning in Embodied Planning and Control: An Approximate Dynamic Programming Perspective
+
+Lead author: Blake Harrison
+Abstract: World models learn action-conditioned representations of latent environment dynamics, supporting embodied prediction, planning, control, simulation, evaluation, and data generation. World foundation models scale these capabilities through large-scale video and multimodal pretraining, while imitation learning, distillation, and reinforcement-learning post-training specialize them into \textbf{World Action Models}, now increasingly central to embodied planning and control. Yet their object-centric and graph-based forms remain weakly integrated with the values, constraints, preferences, policies, natural-language grounding, safe open-ended creative-capability emergence, and neuro-symbolic planners required for online closed-loop decision making. This survey unifies these developments through the lens of approximate dynamic programming and formalizes \textbf{World Action Model Learning} as the decision-oriented extension of world model learning.
+Conventional world models estimate
+\[
+p(s_{t+1}\mid s_t,a_t)
+\]
+and ask what is likely to happen under an action. A \textbf{World Action Model} (WAM) instead couples predictive dynamics to the quantities required to select, evaluate, and revise actions:
+\[
+(s_t,a_t,g)\longmapsto
+\left(
+\hat p(s_{t+1}\mid s_t,\operatorname{do}(a_t)),\,
+\hat r_t,\,
+\hat c_t,\,
+\hat V(s_t,g),\,
+\hat Q(s_t,a_t,g),\,
+\hat\alpha(s_t,a_t,g),\,
+\hat\pi(a_t\mid s_t,g)
+\right),
+\]
+where $\hat\alpha$ denotes action admissibility; a given realization need not parameterize every component explicitly. Causally structured WAMs support abductive inference, interventional rollout, and counterfactual comparison, shifting the central question from \emph{What happens next?} to \emph{What should the agent do next?}
+Our taxonomy spans object-part, relational, and attention-based representations; action-conditioned and causal dynamics; language and goal grounding; reward, cost, value, preference, constraint, option, affordance, and admissibility modeling; learning through imitation, apprenticeship, distillation, offline and inverse reinforcement learning, model-based reinforcement learning, reinforcement learning with verifiable rewards, and multimodal logged-data augmentation; and capability allocation, safe open-ended creative emergence, offline-to-online adaptation, and hybrid world simulation for imagination, self-play, rollout, planning, and control. We further connect these methods to energy-based flow models and normalizing flows. Within this framework, imitation learning and distillation provide policy approximation, model-based reinforcement learning performs model-mediated approximate policy iteration, and model predictive control implements approximate multistep lookahead with learned terminal values or costs. Downstream, we survey applications in embodied manipulation, visual navigation, mobile manipulation, interactive procedural content generation, assisted design, human--robot mixed-initiative co-creation, and multi-agent simulation, and preview a belief-flow extension to the multi-agent setting. We conclude by identifying open problems toward robust generalization with admissible, adaptive, creatively capable, and open-ended object-graph WAMs.
+Target venue: CSUR Journal Survey
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Here are my projects I declared in my semester target document shared with my advisor and APG core-phd group, and I will be sharing with collaborators Josh Feinglass and Varun Jammal this weekend (Varun) and this coming week (Josh). Targets are for this coming 2026 (2027 publication deadline cycles).
 
 
