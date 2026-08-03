@@ -29,7 +29,7 @@ Target venue: CSUR Journal Survey (Sept. Submission)
 
 
 
-Title: CRAFT-X: Creative-Causal Reinforcement Allocation for Frontier Training of Language-Grounded Object-Graph World Action Models
+Title: CRAFT-X: Creative-Causal Reinforcement Allocation for Capability-Frontier Training of Language-Grounded Object-Graph World Action Models
 
 Lead author: Blake Harrison
 
