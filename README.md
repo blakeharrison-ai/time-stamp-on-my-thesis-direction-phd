@@ -81,6 +81,8 @@ Simulation Benchmark (progressive tasks like UED)
 Venue: NeurIPS workshop
 
 
+I am also second and/or co-authoring red-teaming work (I suggested but Varun is innovating) on Varun's prior thesis work revision
+
 —
 
 Title: Hyper-GWLA: Partial-Identification-Aware Hypergraph-Latent Energy Factorization for Inverse World-Language-Action Models
