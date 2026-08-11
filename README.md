@@ -26,7 +26,7 @@ Our taxonomy spans object-part, relational, and attention-based representations;
 Target venue: CSUR Journal Survey (Sept. Submission)
 —
 
-Title: CRAFT-X: Causal Reinforcement Allocation for Invariant Capability-Frontier Expansion in Object-Graph World Action Models
+Title: CRAFT-X: Causal Reinforcement Allocation for Capability-Frontier Expansion in Object-Graph World Action Models
 
 Lead author: Blake Harrison
 
