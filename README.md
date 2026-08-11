@@ -26,6 +26,9 @@ Our taxonomy spans object-part, relational, and attention-based representations;
 Target venue: CSUR Journal Survey (Sept. Submission)
 —
 
+
+
+
 Title: CRAFT-X: Causal Reinforcement Allocation for Capability-Frontier Expansion in Object-Graph World Action Models
 
 Lead author: Blake Harrison
@@ -37,7 +40,6 @@ Reinforcement learning post-training adapts World Foundation Models into World A
 
 Target venue: ICRA
 
-—
 
 Title: Beyond Offline Behavioral Support: Learning Causally Admissible Transport Mass for Language-Grounded Object-Graph World Action Model Predictive Control
 
@@ -48,6 +50,35 @@ Abstract:
 Reinforcement learning post-training can adapt world foundation models into World Action Models (WAMs), yet visual navigation and mobile manipulation in open-ended environments must robustly generalize beyond logs while both preserving quality-diverse capabilities emergence and satisfying feasibility, symbolic constraints, reachability, and recoverability under partial observability and long-horizon distribution shift. We introduce Causal Admissibility via Structural Transport (CAST), which models sibling tasks and domains as interventions on a parent structural causal world model and learns a mechanism-constrained partial optimal-transport coupling between transition occupancies. The support and local mass of mechanism-consistent couplings – not behavior density proxy – define the curriculum and MPC trust region. CAST-MPC is a PEFT/RL-adapted, language-grounded object-hypergraph WAM conditioned on RGB-D scene graphs and knowledge priors. Self-/co-play blends multiagent causal interventional imagined rollouts to create instruction–trajectory pairs, train a latent adapter to frozen Gemma/DINO encoders, and populate a quality-diverse archive. Inverse procedural imagination samples hypergraph programs, simulates worlds, and reconstructs object–part structure, articulations, options, affordances, and causal mechanisms from partial trajectories, using inverse reinforcement learning, implicit tetrahedron factor graph construction (TFGC) and WFM priors. Newton re-simulation labels physical feasibility and Answer Set Programming (ASP) verifies encoded symbolic constraints amortizing them offline. Distilled admissibility signals and decision-weighted reconstruction progress induce an implicit autocurriculum. An inverse-abduction head estimates transport-tube membership, enabling online MPPI acceptance, suffix repair, or rejection. Embodied visual navigation and visual mobile manipulation experiments against offline-safe-RL, shielded-MPC, open-ended autocurriculum, WAM, and scene-graph baselines show CAST-MPC improves robust safe task, object and domain generalization, and dynamic natural-language instruction following on Isaac Lab, Maniskill3-hab, LIBERO, MineDojo. Controlled preference/constraint distribution shift ablations on PCG Benchmark, Sudoku and Infinigen-Sim further show open-ended quality-diversity coverage preservation under constraint.
 Target venue: CVPR (trying for ICRA)
 
+—
+
+Title: Slack Explore (WIP)
+Lead Author: Blake Harrison
+Abstract: Diffusion LLM explore under tube constraints and multilevel causal hypothesis sim for open-ended objectives
+Venue: ICML
+
+Title: Active Matter WIP
+Lead Author: Blake Harrison
+Abstract: UED + Multiagent Self-/Co- Play working on abstract 
+Venue: ICML
+
+—
+
+Title: Co-creative Agents ProcGen paper (UED co play) for open-ended agent eval worlds 
+Lead Author: Blake Harrison
+Abstract: placeholder
+Venue: IEEE CoG
+
+Title: OG-WAM online UED/ACL + meta adaption/hybrid multiagent sim paper 
+Lead Author: Blake Harrison
+Abstract: Meta adaptation abstract placeholder
+Venue: IROS
+
+Title: Working Title
+Lead Author: Blake Harrison
+Abstract: Open-Ended Agent Eval Custom of World Action Models + Realtime VLAs/agents
+Simulation Benchmark (progressive tasks like UED)
+Venue: NeurIPS workshop
 
 
 —
