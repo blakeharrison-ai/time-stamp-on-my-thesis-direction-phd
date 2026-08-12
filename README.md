@@ -69,9 +69,26 @@ Lead Author: Blake Harrison
 Abstract: placeholder
 Venue: IEEE CoG
 
+Title: Slack Explore (WIP)
+Lead Author: Blake Harrison
+Abstract: Diffusion LLM explore under tube constraints and multilevel causal hypothesis sim for open-ended objectives
+Venue: ICML
+
+Title: Active Matter WIP
+Lead Author: Blake Harrison
+Abstract: UED + Multiagent Self-/Co- Play working on abstract 
+Venue: ICML
+
+—
+
+Title: Co-creative Agents ProcGen paper (UED co play) for open-ended agent eval worlds 
+Lead Author: Blake Harrison
+Abstract: placeholder
+Venue: IEEE CoG
+
 Title: OG-WAM online UED/ACL + meta adaption/hybrid multiagent sim paper 
 Lead Author: Blake Harrison
-Abstract: Meta adaptation abstract placeholder
+Abstract: Meta adaptation abstract placeholder (online continual learning adaption with fixed OG-Graph Scaffold via hybrid online imagination hybrid simulation unlearning/model editing extension)
 Venue: IROS
 
 Title: Working Title
