@@ -40,6 +40,15 @@ Reinforcement learning post-training adapts World Foundation Models into World A
 
 Target venue: ICRA
 
+—
+
+Title: His long term STLDrive work revised
+Lead Author: Varun Jammul
+Second Author: Blake Harrison
+Abstract: his innovations on his long term paper with baselines/world action model + imitation learning I design and setup on autonomous driving
+Venue: ICRA
+NOTE: inspiration was found from Maryland GAMMA group concerning potential red teaming innovation
+
 
 Title: Beyond Offline Behavioral Support: Learning Causally Admissible Transport Mass for Language-Grounded Object-Graph World Action Model Predictive Control
 
@@ -66,24 +75,7 @@ Venue: ICML
 
 Title: Co-creative Agents ProcGen paper (UED co play) for open-ended agent eval worlds 
 Lead Author: Blake Harrison
-Abstract: placeholder
-Venue: IEEE CoG
-
-Title: Slack Explore (WIP)
-Lead Author: Blake Harrison
-Abstract: Diffusion LLM explore under tube constraints and multilevel causal hypothesis sim for open-ended objectives
-Venue: ICML
-
-Title: Active Matter WIP
-Lead Author: Blake Harrison
-Abstract: UED + Multiagent Self-/Co- Play working on abstract 
-Venue: ICML
-
-—
-
-Title: Co-creative Agents ProcGen paper (UED co play) for open-ended agent eval worlds 
-Lead Author: Blake Harrison
-Abstract: placeholder
+Abstract: explicit computational creativity and quality diversity open-ended objectives placeholder
 Venue: IEEE CoG
 
 Title: OG-WAM online UED/ACL + meta adaption/hybrid multiagent sim paper 
@@ -94,8 +86,14 @@ Venue: IROS
 Title: Working Title
 Lead Author: Blake Harrison
 Abstract: Open-Ended Agent Eval Custom of World Action Models + Realtime VLAs/agents
-Simulation Benchmark (progressive tasks like UED)
+Simulation Benchmark (progressive tasks like UED for open-ended learning evaluation)
 Venue: NeurIPS workshop
+
+Title: Working Title
+Lead Author: Blake Harrison
+Abstract: Generic Placeholder for CoRL as extension in current direction
+Venue: CoRL
+
 
 
 I am also second and/or co-authoring red-teaming work (I suggested but Varun is innovating) on Varun's prior thesis work revision
