@@ -23,17 +23,13 @@ and ask what is likely to happen under an action. A \textbf{World Action Model} 
 \]
 where $\hat\alpha$ denotes action admissibility; a given realization need not parameterize every component explicitly. Causally structured WAMs support abductive inference, interventional rollout, and counterfactual comparison, shifting the central question from \emph{What happens next?} to \emph{What should the agent do next?}
 Our taxonomy spans object-part, relational, and attention-based representations; action-conditioned and causal dynamics from a structural causal modeling perspective; language and goal grounding; and reward, cost, value, preference, constraint, option, affordance, and admissibility modeling. It then organizes learning through imitation, apprenticeship, distillation, offline and inverse reinforcement learning, model-based reinforcement learning, reinforcement learning with verifiable rewards, and multimodal logged-data augmentation, together with capability allocation, safe open-ended creative emergence, offline-to-online adaptation, and hybrid world simulation for imagination, dreaming, self-play, co-play, self-improvement, rollout, reasoning, planning, and control. We further connect these methods to energy-based flow models and normalizing flows. Within this framework, imitation learning and distillation provide policy approximation, model-based reinforcement learning performs model-mediated approximate policy iteration, and model predictive control implements approximate multistep lookahead with learned terminal values or costs. Downstream, we survey applications in embodied manipulation, visual navigation, mobile manipulation, interactive procedural content generation, assisted design, human--robot mixed-initiative co-creation, and multi-agent simulation, and preview a belief-flow reasoning extension to partially observed multi-agent settings and future open-world agents. We conclude by identifying open problems toward robust generalization with admissible, adaptive, creatively capable, and open-ended object-graph WAMs.
-Target venue: CSUR Journal Survey (Sept. Submission)
+Target venue: CSUR Journal Survey (Oct. target submission, with feedback revisions Dec. latest)
 —
 
-Title: CRAFT-X: Causal Reinforcement Allocation for Capability-Frontier Expansion in Object-Graph World Action Models
-
+Title: CRAFT-X: Causal Reinforcement Allocation for MPC-Oriented Capability-Frontier Expansion in Object-Graph World Action Models
 Lead author: Blake Harrison
-
 Abstract: 
-
-Reinforcement learning post-training adapts World Foundation Models into World Action Models (WAMs) for open-ended embodied planning and control, but gains in robust generalization, compositional reasoning, creative emergence, and executable capability depend critically on how open-ended learning generates and allocates training experience. Existing open-ended learning methods, including unsupervised environment design (UED) and automatic curriculum learning (ACL), generate or prioritize experience using regret, learnability, learning progress, novelty and diversity, information gain, or short-horizon policy and cross-task improvement. These objectives do not directly optimize persistent, intervention-robust, transferable, and compositional capability expansion. We introduce Causal Reinforcement Allocation for Capability-Frontier Training and eXpansion (\textbf{CRAFT-X}), allocating experience by \textbf{interventional invariant capability-frontier gain}: predicted post-update expansion of reliably executable, quality-diverse behavior--option--affordance capabilities on held-out structural-intervention probes, with gain isolated through matched counterfactual contrasts. Structured imagination and self-/co-play generate interventions; learned-physics/symbolic validation filters infeasible proposals. A multiscale phase-space, energy-based, object-centric Bayesian factor hypergraph organizes the WAM into a six-level object-graph hierarchy and attributes gain to reducible decision-relevant gaps, while Computational Creativity and quality-diversity objectives preserve distinct skill and competency modes as phase-separated energy basins until MPPI rollout-ranking collapse. Training alternates between allocation, WAM value updates, and MPC-oriented frontier re-estimation. Across visual and proprioceptive navigation, manipulation and mobile manipulation on RoboCasa365, Meta-World+, Isaac Lab, and ablations on OGMARL, ProcGen, BipedalWalkerHardcore, CRAFT-X \textbf{[RESULTS PREVIEW]}, improving frontier capability growth, transfer, and compositional robust generalization task performance under object, layout, mechanism, and natural-language instruction distribution shifts.
-
+Reinforcement learning post-training adapts World Foundation Models into World Action Models (WAMs) for open-ended embodied planning and control, but gains in robust generalization, compositional reasoning, creative emergence, and executable capability depend critically on how open-ended learning generates and allocates training experience. Existing open-ended learning methods, including unsupervised environment design (UED) and automatic curriculum learning (ACL), generate or prioritize experience using regret, learnability, learning progress, novelty and diversity, information gain, or short-horizon policy and cross-task improvement. These objectives do not directly optimize persistent, intervention-robust, transferable, and compositional capability expansion. We introduce Causal Reinforcement Allocation for Capability-Frontier Training and eXpansion (\textbf{CRAFT-X}), allocating experience by \textbf{interventional invariant capability-frontier gain}: predicted post-update expansion of reliably executable, quality-diverse behavior--option--affordance capabilities on held-out structural-intervention probes, with gain isolated through matched counterfactual contrasts. Structured imagination and self-/co-play generate interventions; learned-physics/symbolic validation filters infeasible proposals. A multiscale phase-space, energy-based, object-centric Bayesian factor multilayer hypergraph organizes the WAM into a six-level object-graph hierarchy and attributes gain to reducible decision-relevant gaps, while Computational Creativity and quality-diversity objectives preserve distinct skill and competency modes as phase-separated energy basins until MPPI rollout-ranking collapse. Training alternates between allocation, WAM value updates, and MPC-oriented frontier re-estimation. Across visual and proprioceptive navigation, manipulation and mobile manipulation on RoboCasa365, Meta-World+, Isaac Lab, and ablations on OGMARL, ProcGen, BipedalWalkerHardcore, CRAFT-X \textbf{[RESULTS PREVIEW]}, improving frontier capability growth, transfer, and compositional robust generalization task performance under object, layout, mechanism, and natural-language instruction distribution shifts.
 Target venue: ICLR
 
 —
@@ -42,53 +38,58 @@ Title: His long term STLDrive work revised
 Lead Author: Varun Jammul
 Second Author: Blake Harrison
 Abstract: his innovations on his long term paper with baselines/world action model + imitation learning I design and setup on autonomous driving
-Venue: ICRA
+Target Venue: CVPR
 NOTE: inspiration was found from Maryland GAMMA group concerning potential red teaming innovation
 
-
-Title: Beyond Offline Behavioral Support: Learning Causally Admissible Transport Mass for Language-Grounded Object-Graph World Action Model Predictive Control
-
+Title: CAST-MPC: Causally Admissible Transport Mass for Language-Conditioned, Quality-Diverse Capability Expansion in VLM-Grounded Object-Graph World Action Models
 Lead author: Blake Harrison
-
 Abstract: 
-
-Reinforcement learning post-training can adapt world foundation models into World Action Models (WAMs), yet visual navigation and mobile manipulation in open-ended environments must robustly generalize beyond logs while both preserving quality-diverse capabilities emergence and satisfying feasibility, symbolic constraints, reachability, and recoverability under partial observability and long-horizon distribution shift. We introduce Causal Admissibility via Structural Transport (CAST), which models sibling tasks and domains as interventions on a parent structural causal world model and learns a mechanism-constrained partial optimal-transport coupling between transition occupancies. The support and local mass of mechanism-consistent couplings – not behavior density proxy – define the curriculum and MPC trust region. CAST-MPC is a PEFT/RL-adapted, language-grounded object-hypergraph WAM conditioned on RGB-D scene graphs and knowledge priors. Self-/co-play blends multiagent causal interventional imagined rollouts to create instruction–trajectory pairs, train a latent adapter to frozen Gemma/DINO encoders, and populate a quality-diverse archive. Inverse procedural imagination samples hypergraph programs, simulates worlds, and reconstructs object–part structure, articulations, options, affordances, and causal mechanisms from partial trajectories, using inverse reinforcement learning, implicit tetrahedron factor graph construction (TFGC) and WFM priors. Newton re-simulation labels physical feasibility and Answer Set Programming (ASP) verifies encoded symbolic constraints amortizing them offline. Distilled admissibility signals and decision-weighted reconstruction progress induce an implicit autocurriculum. An inverse-abduction head estimates transport-tube membership, enabling online MPPI acceptance, suffix repair, or rejection. Embodied visual navigation and visual mobile manipulation experiments against offline-safe-RL, shielded-MPC, open-ended autocurriculum, WAM, and scene-graph baselines show CAST-MPC improves robust safe task, object and domain generalization, and dynamic natural-language instruction following on Isaac Lab, Maniskill3-hab, LIBERO, MineDojo. Controlled preference/constraint distribution shift ablations on PCG Benchmark, Sudoku and Infinigen-Sim further show open-ended quality-diversity coverage preservation under constraint.
-Target venue: CVPR (trying for ICRA)
-
+Embodied visual agents must infer not only which objects and parts a scene contains, but which language-grounded affordances remain executable when configurations, constraints, and interactions depart from offline demonstrations. Existing world model and offline policy approaches gate such decisions by behavioral support, the density of prior behavior near a transition, which conflates familiarity with admissibility: feasibility, constraint validity, reachability, and recoverability. We introduce CAST (Causal Admissibility via Structural Transport), a neuro-symbolic framework for learning Object-Graph World Action Models (OG-WAMs). CAST models related tasks and domains as interventions on a shared structural causal world model and learns a mechanism-constrained partial optimal-transport coupling between their transition occupancies. The transported mass of object–affordance transitions consistent with invariant subtask mechanisms inherited from the shared parent domain, rather than behavior density, defines both an implicit autocurriculum and the deployment trust region used to construct uncertainty-calibrated tubes. CAST instantiates each OG-WAM by parsing RGB-D observations into language-grounded object–part multilayer hypergraphs conditioned on visual world foundation model features and knowledge priors. Inverse procedural imagination samples hypergraph programs, re-simulates them, and reconstructs articulations, options, affordances, and causal mechanisms from partial trajectories; Newton re-simulation certifies physical feasibility and Answer Set Programming certifies symbolic validity, amortizing verification offline. Self- and co-play with causal interventional imagination populate a quality-diverse capability archive prioritized by decision-weighted progress in admissible coverage. Within the OG-WAM, a potential-parameterized continuous normalizing flow trained by flow matching and viscosity-consistent HJB regularization learns the value function that defines the terminal energy of the Gibbs-weighted nominal rollout distribution optimized by online Tube-MPPI. An inverse-abduction head distills time-indexed transport-tube membership into an online test that accepts nominal MPPI rollouts under tightened constraints, repairs deviations through ancillary feedback, or rejects rollouts whose containment cannot be certified. Across Isaac Lab, ManiSkill3-HAB, LIBERO, MineDojo, and Infinigen, we evaluate task, object, affordance, and domain generalization, dynamic instruction following, and preservation of quality-diverse capability coverage under controlled procedural shifts.
+Target venue: CVPR 
 —
 
-Title: Slack Explore (WIP)
+Title: RESONANCE-UED: Causal Micro–Macro Reflexivity for Transformationally Creative Regime Generation over Self-Organizing Multi-Agent Object-Graph Belief Flows
 Lead Author: Blake Harrison
-Abstract: Diffusion LLM explore under tube constraints and multilevel causal hypothesis sim for open-ended objectives
-Venue: ICML
+Abstract: UED + Multiagent Self-/Co- Play + POSG belief flow working on abstract 
+Micro-Macro, local-to-global, bottom up vs top down directed select organization emergence of shared belief-state flows to achieve UED curriculum to train single agent World Action Models
 
-Title: Active Matter WIP
+Target Venue: ICML
+
+Title: TETRA-RLVR: Canonical Tetrahedron Verification and Value Guidance for Offline Video Multimodal Logs to Online Hybrid-Simulation Embodied Planning
 Lead Author: Blake Harrison
-Abstract: UED + Multiagent Self-/Co- Play working on abstract 
-Venue: ICML
+Abstract: In the age of digital media there is an ever growing corpus of multimodal log data including video, text, and audio. Recent offline-to-online control work has taken advantage of this in robot learning through the induction of World Action Models. Furthermore, there exists a mature corpus of inverse and offline reinforcement learning methods that are strongly positioned to leverage these data sources for robust value function learning. However, these data sources tend to not exhibit physically accurate coherency and lack causal progression, especially over long horizons. Can hybrid simulation come to the rescue? We ask is offline video simulation enough to support long horizon capabilities and value function learning for online embodied planning under uncertainty? If not, can it be augmented with pre-existing externalized simulators and distillation to correct inaccuracies? We introduce TETRA-RLVR, an inverse tetrahedron volume rendering approach to inverse reinforcement learning from video offline log data that leverages self simulation to autocorrect physical feasibility and causal drift for value function induction. We show that TETRA-RLVR improves long horizon imagination and planning over strong inverse and offline reinforcement learning baselines on a variety of manipulation, mobile manipulation, and humanoid robot tasks having seen only video both in-distribution demonstrations and task out-of-distribution.
+Target Venue: SIGGRAPH (primary target) or IROS
 
-—
-
-Title: Co-creative Agents ProcGen paper (UED co play) for open-ended agent eval worlds 
+Title: KALEIDO-MEM: Lifelong Quality-Diverse Memory of Open-Ended Plan Capability Spaces for enriched co-creative simulation
 Lead Author: Blake Harrison
-Abstract: explicit computational creativity and quality diversity open-ended objectives placeholder
-Venue: IEEE CoG
+Abstract: Embodied agents that can learn and develop new capabilities online offers a promising look towards future self reflexive and self improving systems. However, there exists major hurdles to overcome before this promise becomes a reality. One of the major issues is that of adaptive memory retention and retrieval over long horizons. Existing methods often break down and fail to adapt to situations under partial identification issues under partial observability and long horizons. This problem compounds when you introduce dynamic agent intents and commands. We introduce KALEIDO-MEM, an object-graph memory module that is capable of learning, unlearning and multi-context adaptation through online learning and environment information query probes through a self contained explicit voxel world to implicit object-graph representation. We further show that our method improves on retrieval and retention of executable capabilities under dynamic and task generalization out-of-distribution over strong memory retention and retrieval baselines on long-horizon navigation and mobile manipulation in hi-fidelity simulation and real2sim2real real drone navigation tasks under dynamically changing language-conditioned instructions.
 
-Title: OG-WAM online UED/ACL + meta adaption/hybrid multiagent sim paper 
-Lead Author: Blake Harrison
-Abstract: Meta adaptation abstract placeholder (online continual learning adaption with fixed OG-Graph Scaffold via hybrid online imagination hybrid simulation unlearning/model editing extension)
-Venue: IROS
+Target Venue: IROS
 
-Title: Working Title
+Title: Learning Graph Grammars: Computationally Creative Open-Ended World Design through Co-Creative Co-Play and Growing Graph Representations
 Lead Author: Blake Harrison
-Abstract: Open-Ended Agent Eval Custom of World Action Models + Realtime VLAs/agents
+Abstract: Graph Grammars in conjunction with growing graphs have proven to be extremely useful for the design of large scale interactive worlds for media and simulation. However, much of the learning of these grammars tends to be performed adhoc and domain specific. In practice this can lead to underspecification of dense quality-diverse samples as well lack of online adaptability when it comes time to upgrade worlds. We introduce Graph Field Grammars (GfG), a semi-supervised to self supervised object-graph quantum field theory inspired approach to inverse procedural generation and relearning of new grammars through self play and self improvement that creates new grammars from multiagent interaction and reformulates rules according to emergent social contracts while staying bounded both to local combination and global constraints through neural symbolic online hybrid simulator verification. We show that GfG outperforms other RLPCG and Graph-based PCG as well as classical Graph Grammar methods in terms of emergent quality-diversity of content generated as well as language-conditioned soft and hard constraint adherence on PCGBenchmark and LongProc. We further show that our method remains online adaptive and can unlearn and relearn new grammars by removing subsections of the grammar tree. Finally, we stress test our method using blender geometry nodes and Infinigen to show that with only a few initial grammar definitions complexity of emergent grammars grow rapidly.
+Target Venue: IEEE CoG
+
+Title: OpenWAM-Bench: Progressive Open-Ended Evaluation of Language-Grounded World Action Models
+Lead Author: Blake Harrison
+Abstract: Open-ended agents offer compelling promises 
+
+Open-Ended Agent Eval Custom of World Action Models + Realtime VLAs/agents
 Simulation Benchmark (progressive tasks like UED for open-ended learning evaluation)
-Venue: NeurIPS workshop
+Target Venue: NeurIPS workshop
 
-Title: Working Title
+Title: RECAST-OGWAM: Online Compositional Editing and Replanning of Object-Graph World Action Models via Active Parameter-Efficient Latent Value–Action Adaptation
 Lead Author: Blake Harrison
-Abstract: Generic Placeholder for CoRL as extension in current direction
-Venue: CoRL
+Abstract: Meta adaptation abstract placeholder (online continual learning adaption with fixed OG-Graph Scaffold via hybrid online imagination hybrid simulation unlearning/model editing extension) | OG-WAM online UED/ACL + meta adaption/hybrid multiagent sim paper
+Target Venue: CoRL
+
+Title: Universe in a Bottle: Meta-Adaptive Editing and Unlearning of RLVR Co-Evolving Object-Graph World Action Models
+Lead Author: Blake Harrison
+Abstract: Graphs are ubiquitous and there are mature communities around graph neural networks and factor graphs for use in embodied navigation and manipulation.
+
+Generic Placeholder for CoRL as extension in current direction. Last concept graph editing I started in Dmitry’s course. The concept is to form a graph and then to allow for meta learning adaptation of the evolving growing graph online without destroying the original structure.
+Target Venue: CoRL
 
 
 
