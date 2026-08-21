@@ -1,26 +1,15 @@
 # time-stamp-on-my-thesis-direction-phd
 
 Title: Object-Graph World Action Model Learning for Open-Ended Embodied Planning and Control: An Approximate Dynamic Programming Perspective
-Lead author: Blake Harrison Abstract: World models learn action-conditioned representations of latent environment dynamics, supporting embodied prediction, reasoning, planning, control, simulation, evaluation, and data generation. World foundation models scale these capabilities through large-scale video and multimodal pretraining, while imitation learning, distillation, and reinforcement-learning post-training specialize them into \textbf{World Action Models}, now increasingly central to embodied planning and control. Yet their object-centric and graph-based forms remain weakly integrated with the values, constraints, preferences, policies, natural-language grounding, safe open-ended creative emergence, and neuro-symbolic planners required for online closed-loop decision making. This survey unifies these developments through the lens of approximate dynamic programming and formalizes \textbf{World Action Model Learning} as the decision-oriented extension of world model learning.
-Conventional world models estimate
-\[
-p(s_{t+1}\mid s_t,a_t)
-\]
-and ask what is likely to happen under an action. A \textbf{World Action Model} (WAM) instead couples predictive dynamics to the quantities required to select, evaluate, and revise actions:
-\[
-(s_t,a_t,g)\longmapsto
-\left(
-\hat p(s_{t+1}\mid s_t,\operatorname{do}(a_t)),\,
-\hat r_t,\,
-\hat c_t,\,
-\hat V(s_t,g),\,
-\hat Q(s_t,a_t,g),\,
-\hat\alpha(s_t,a_t,g),\,
-\hat\pi(a_t\mid s_t,g)
-\right),
-\]
-where $\hat\alpha$ denotes action admissibility; a given realization need not parameterize every component explicitly. Causally structured WAMs support abductive inference, interventional rollout, and counterfactual comparison, shifting the central question from \emph{What happens next?} to \emph{What should the agent do next?}
-Our taxonomy spans object-part, relational, and attention-based representations; action-conditioned and causal dynamics from a structural causal modeling perspective; language and goal grounding; and reward, cost, value, preference, constraint, option, affordance, and admissibility modeling. It then organizes learning through imitation, apprenticeship, distillation, offline and inverse reinforcement learning, model-based reinforcement learning, reinforcement learning with verifiable rewards, and multimodal logged-data augmentation, together with capability allocation, safe open-ended creative emergence, offline-to-online adaptation, and hybrid world simulation for imagination, dreaming, self-play, co-play, self-improvement, rollout, reasoning, planning, and control. We further connect these methods to energy-based flow models and normalizing flows. Within this framework, imitation learning and distillation provide policy approximation, model-based reinforcement learning performs model-mediated approximate policy iteration, and model predictive control implements approximate multistep lookahead with learned terminal values or costs. Downstream, we survey applications in embodied manipulation, visual navigation, mobile manipulation, interactive procedural content generation, assisted design, human--robot mixed-initiative co-creation, and multi-agent simulation, and preview a belief-flow reasoning extension to parametric unlearning and model editing, time-aware OG-WAMs, partially observed multi-agent settings, differentiable structural interventional, including counterfactual simulation, inverse graphics, advanced object factorization of latent dynamics, value and reward learning, language-conditioned safety, mixed initiative and co-creation settings and supporting memory modules for lifelong open-world agents. We conclude by identifying open problems toward robust generalization with admissible, adaptive, creatively capable, and open-ended object-graph WAMs.
+Lead author: Blake Harrison Abstract: World Action Models (WAMs) extend the concept of World Models from asking \emph{what happens next} to
+\emph{what the agent should do next}, coupling causal, interventional dynamics
+with rewards, values, admissibility, and policies for closed-loop
+decision-making. However, the literature remains fragments surrounding Object-Graph World Action Models (OG-WAMs), pertaining to 
+open-ended learning, model editing and unlearning, and hybrid world simulation for language-grounded embodied robust generalization and adaptation.
+To address this gap, we survey existing related works and synthesize an offline-to-online approximate dynamic programming framework unifying model-based reinforcement learning (MBRL)
+and model predictive control (MPC), for studying the learning and evolution of OG-WAMs for open-ended agent applications. In terms of object-centric graph representations we cover knowledge graphs, scene graphs, factor graphs, graph-neural networks, energy-based flow graph structures, graph continuous geometric manifolds and structural causal bayesian graphs, as well as the special cases of attention-based transformer architectures and regular grid latices such as tetrahedron, voxel and 2D grid substrates.
+Under open-ended learning we cover computational creativity, unsupervised environment editing, automatic curriculum learning, intrinsic exploration methods, procedural world generation, object-centric representation and compositional reasoning, quality-diversity, multi-agent and other self organizing emergence, capability-frontier expansion,
+direct value learning and action adaptor learning, distillation, learning using priviledged signals (LUPI) and offline, imitation, inverse and neuro-symbolic (NeSy) reinforcement learning to online MPC, as well as language-grounding for context, edit contracts, hard constraints and preferences. Under object-graph world action model editing & unlearning we study internal editing, world editing, decision editing, value editing, capabilities editing, lifecycle adaptation and  removal and assurance. Under hybrid world simulation (coupled explicit and learned models) we cover: Physics–learning hybrid dynamics, Inverse graphics approaches, Object-centric multi-physics and multi-resolution co-simulation, Generative perceptual simulation and digital twins, Causal, semantic, language-grounded, and neuro-symbolic simulation, Real–sim adaptation, uncertainty, and multi-fidelity simulation, Self Play and Self Improvement through simulation, Closed-loop counterfactual simulation for safe decision-making and assurance, lifelong simulation and multi-agent simulation for creative emergence, and active perception online grounded simulation. In terms of downstream embodied applications we cover: visual & proprioperceptive navigation, autonomous vehicle navigation, fixed/mobile manipulation, traffic flow planning and control, virtual agents for simulations and games, procedural world and content generation, as it pertains to the focus of our survey on OG-WAMs.  
 Target venue: CSUR Journal Survey (Oct. target submission, with feedback revisions Dec. latest)
 —
 
