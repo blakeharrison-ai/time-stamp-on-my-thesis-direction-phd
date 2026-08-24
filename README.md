@@ -1,5 +1,6 @@
 # time-stamp-on-my-thesis-direction-phd
 
+
 Title: C³RAFT-X: Addressable Creative Capability-Frontier Expansion in Object-Graph World Action Models for Embodied MPC
 Lead author: Blake Harrison
 Abstract: Reinforcement learning post-training adapts World Foundation Models into World Action Models for embodied MPC, where generalization, compositional reasoning, and creative capability-frontier expansion hinge on curriculum-experience allocation. Open-ended learning (OEL) allocates by regret, learnability, novelty/diversity, or information gain; yet none estimates each experience’s causal contribution to persistent, transferable frontier expansion — and none can, for post-training lacks stable write addresses: shared capability updates risk interference and frustrate revision. C³RAFT-X allocates experience by interventional capability-frontier gain: predicted retention-weighted improvement in multi-objective quality-diversity — per-cell Pareto hypervolume over task value and combinational, exploratory, and transformational creativity (C³) — under goal–option–affordance structure, against compute-matched controls on held-out interventions. Causal imagination and fractal-shifted self-/co-play generate interventions, screened by learned physics and answer-set programming. A multiscale object-centric factor-graph GNN attributes gains to decision gaps; updates write to cell-addressed adapter subspaces, write-isolation limiting interference. Energy-based QD phase-separation enables cross-attentive capability blending for terminal-value-guided MPPI over hybrid-world-simulation rollouts. Across visual/proprioceptive navigation and fixed/mobile manipulation (RoboCasa365, Meta-World+, Isaac Lab, BipedalWalkerHardcore), C³RAFT-X improves frontier gain, zero-shot transfer, and compositional robustness over OEL baselines under structural and instruction shifts, with edit-locality probes bounding non-target drift.
@@ -78,6 +79,7 @@ Title: placeholder for Open-Ended editing Multiagent Coevolve / Additional Mixed
 Lead Author: Blake Harrison 
 Abstract: ..
 Target Venue: CoRL
+
 
 
 —
