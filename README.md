@@ -1,3 +1,7 @@
+
+
+
+
 # time-stamp-on-my-thesis-direction-phd
 
 
@@ -80,7 +84,24 @@ Lead Author: Blake Harrison
 Abstract: ..
 Target Venue: CoRL
 
+Told my advisor:
 
+Hi Yezhou,
+
+I am simplifying my C³RAFT-X paper this weekend around capability-niche advantage and plan to share an updated draft with results this week.
+
+I am also reworking my survey around a single concept that now unifies the papers:
+
+Autonomous Robotics: Robust Generalization with Neurosymbolic Object-Graph World Action Models — An Approximate Dynamic Programming Perspective
+
+I am introducing NeSOG-WAMs (Neurosymbolic Object-Graph World Action Models) as the organizing model family. I am narrowing the primary robotics domains to mobile manipulation, autonomous vehicles, and drones, with Game AI as an additional domain for open-ended learning and procedural world generation.
+
+The core research problems are open-ended capability acquisition; adaptive composition and blending of behaviors, options, affordances, higher-level capabilities, and structured knowledge; and model editing/unlearning for robust and admissible generalization in embodied MBRL/MPC. I am treating adversarial robustness as an extension of the broader robust-generalization problem rather than a separate thesis direction.
+
+Supporting concepts include open-ended curriculum and experience generation (ACL, UED, intrinsic motivation, quality-diversity, computational creativity, imagination, and self/co-play/self-improvement); continual and multi-agent adaptation (meta-adaptation, co-evolution, and self-organization); and hybrid world simulation and co-creation (procedural generation and mixed-initiative methods).
+
+Best,
+Blake
 
 —
 
