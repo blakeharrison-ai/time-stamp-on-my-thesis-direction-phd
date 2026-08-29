@@ -103,6 +103,17 @@ Supporting concepts include open-ended curriculum and experience generation (ACL
 Best,
 Blake
 
+and labmate:
+
+I think my new survey title clearly states my core problem:
+
+Autonomous Robotics: Robust Generalization through Open-Ended Learning and Model Editing of Neurosymbolic Object-Graph World Action Models — An Approximate Dynamic Programming Perspective
+
+Domains:
+(Mobile Manipulation, Visual Navigation, Autonomous Vehicles, UxVs and Game AI for open-ended learning and procedural world generation aspects)
+
+I also changed the subgroup name to APG Robotics & World Models Subgroup to bring in more interest.
+
 —
 
 Title: Hyper-GWLA: Partial-Identification-Aware Hypergraph-Latent Energy Factorization for Inverse World-Language-Action Models
