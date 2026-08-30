@@ -17,13 +17,6 @@ I think the survey could help consolidate and potentially trailblaze this inters
 I see open-ended learning concepts (intrinsic motivation, unsupervised environment design, automatic curriculum allocation, co-evolution, developmental robotics, self play and self improvement, continual learning, etc.) MBRL/MPC, causality, RLVR and IRL, imitation learning and evolutionary/QD methods primarily as methodological tools within this broader framework rather than separate research directions. As well as downstream UxV navigation, mobile manipulation, autonomous vehicles and digitals twins, and game/sim AI for procedural world generation and open-ended learning.
 
 For my first C3RAFT-X paper I am presenting a UED method that improves robust generalization under distribution shifts.
-For my first C3RAFT-X paper I am presenting a UED method that improves robust generalization under distribution shifts.
-also told my colleague:
-
-Told YZ that moving forward my area is:
-Open-Ended Agent–World Co-Evolution through Continual Model–World Editing for Embodied Intelligence  with concrete first paper unsupervised environment design (UED) Open-Ended Learning (OEL) subfield problem and POET paper for robust generalization under (structural, task, instruction, dynamics) OOD shifts.
-
-using language-grounded Neurosymbolic Object-Graph World Action Models (NeSOG-WAMs), which I introduce in my paper as the common MBRL/MPC substrate for this direction.  It sits at the conjunction of several mature fields and a primary emerging hybrid research direction that I’m formalizing in my CSUR survey.
 
 Going to need to put together clear visuals and references to existing literature intro I think for the slides.
 
