@@ -1,4 +1,22 @@
+For my research direction I told my PhD advisor:
 
+Hi Yezhou,
+
+I’ll be sharing my ICLR draft with results this week, but I wanted to give you a brief update.
+
+I think I found the exact concept to anchor my research around moving forward: Open-Ended Agent--World Co-Evolution through Continual Model--World Editing for Embodied Intelligence (working name) - first paper RoboCasa and Isaac Lab are used.
+
+POET provides a strong precedent for the open-ended co-evolution of environments and agents, while unsupervised and open-ended environment design give me a concrete first testbed for the curriculum-allocation problem in my first paper. This also seems to provide a natural continuation from Oak and from offline-pretrained world models toward continual online world-model adaptation and MPC.
+
+I have also been moving toward language-grounded Neurosymbolic Object-Graph World Action Models (NeSOG-WAMs) as the common MBRL/MPC substrate for this direction. The idea is to support agents that continually acquire, retain, and compose capabilities while their internal models and the shared executable world can both be continually edited and extended, including targeted model unlearning when knowledge or capabilities must be removed.
+
+Recent systems such as DeepMind's Genie 3 and SIMA 2 provide encouraging evidence for the broader premise that generalist embodied agents can generalize and adapt through interaction with diverse generated worlds. This makes problems such as robust generalization under structural, task, instruction, and dynamics shifts; online adaptation; partial identification; transfer, persistent model--world causal local-to-global admissibility; and open-ended capability acquisition and composition, as well as extended memory and retrieval particularly interesting to me.
+
+I think the survey could help consolidate and potentially trailblaze this intersection by connecting open-ended learning and co-evolution, continual model editing and unlearning, hybrid and generative world simulation, embodied robot learning, mixed-initiative and co-creative world editing, computational creativity (including transformational creativity and conceptual blending), procedural world generation, and multi-agent emergence around the common problem of persistent agent--world co-evolution.
+
+I see curriculum allocation, MBRL/MPC, RLVR and IRL, and evolutionary/QD methods primarily as methodological tools within this broader framework rather than separate research directions.
+
+For my first C3RAFT-X paper I am presenting a UED method that improves robust generalization under distribution shifts.
 
 
 
