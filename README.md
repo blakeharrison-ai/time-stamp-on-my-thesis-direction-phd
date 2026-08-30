@@ -12,12 +12,11 @@ I have also been moving toward language-grounded Neurosymbolic Object-Graph Worl
 
 Recent systems such as DeepMind's Genie 3 and SIMA 2 provide encouraging evidence for the broader premise that generalist embodied agents can generalize and adapt through interaction with diverse generated worlds. This makes problems such as robust generalization under structural, task, instruction, and dynamics shifts; online adaptation; partial identification; transfer, persistent model--world causal local-to-global admissibility; and open-ended capability acquisition and composition, as well as extended memory and retrieval particularly interesting to me.
 
-I think the survey could help consolidate and potentially trailblaze this intersection by connecting open-ended learning and co-evolution, continual model editing and unlearning, hybrid and generative world simulation, embodied robot learning, mixed-initiative and co-creative world editing, computational creativity (including transformational creativity and conceptual blending), procedural world generation, and multi-agent emergence around the common problem of persistent agent--world co-evolution.
+I think the survey could help consolidate and potentially trailblaze this intersection by connecting open-ended learning and co-evolution, continual model editing and unlearning, hybrid and generative world simulation, embodied robot learning, mixed-initiative and co-creative world editing, imagination-augmentation, computational creativity (including transformational creativity and conceptual blending), procedural world generation, and multi-agent emergence around the common problem of persistent agent--world co-evolution.
 
 I see open-ended learning concepts (intrinsic motivation, unsupervised environment design, automatic curriculum allocation, co-evolution, developmental robotics, self play and self improvement, continual learning, etc.) MBRL/MPC, causality, RLVR and IRL, and evolutionary/QD methods primarily as methodological tools within this broader framework rather than separate research directions. As well as downstream UxV navigation, mobile manipulation, autonomous vehicles and digitals twins, and game/sim AI for procedural world generation and open-ended learning.
 
 For my first C3RAFT-X paper I am presenting a UED method that improves robust generalization under distribution shifts.
-
 also told my colleague:
 
 Told YZ that moving forward my area is:
