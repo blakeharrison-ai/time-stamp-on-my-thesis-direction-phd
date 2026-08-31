@@ -20,7 +20,7 @@ For the first C³RAFT-X paper, the immediate contribution is much narrower: a UE
 
 Going to need to put together clear visuals and references to existing literature intro I think for the slides.
 
-Also relevant https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/ and https://github.com/NVIDIA-Medtech/Cosmos-H-Surgical. I have a partial PoC demo but am working on getting my paper drafted / results for Friday present. Will post demo for this tomorrow / slides.
+Also relevant: https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/ and https://github.com/NVIDIA-Medtech/Cosmos-H-Surgical. I have a partial PoC demo, but am working on getting my paper drafted / results ready for Friday’s presentation. Will post the demo tomorrow along with slides. If we go the simulation-generation route, my approach could also use language instructions to condition the generation.
 
 # time-stamp-on-my-thesis-direction-phd
 Title: Open-Ended Embodied Imitation Learning: An Offline-to-Online Approximate Dynamic Programming Perspective
