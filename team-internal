@@ -10,9 +10,11 @@ So essentially: embodied imitation learning from task video for expert review: d
 
 One concept I think could be interesting is to use Cosmos-Nano as the WAM and decompose behavior into reusable capability components, then learn how to recombine those capabilities during online post-training for compositional adaptation / robust OOD generalization. We could use expert surgical demonstrations and scores to learn an expert-proxy value function evaluator that estimates successful subgoal completion and trajectory quality. This could then provide performance scores, highlight specific maneuvers or deviations, and generate language-grounded recommendations that new surgeons could use to improve.
 
-I could also pair this with cuRobo -- I already have a working manipulation agent (mobile manipulation but works for precision dexterity as well) using it -- to generate controlled trajectories around known modeled constraint-violation boundaries. That would give us explicit nominal vs. violation examples to test whether the learned subgoal/value representation actually responds correctly, while automatic curriculum generation could target missing capability combinations or weak regions of the task space.
+I could also pair this with cuRobo -- I already have a working manipulation agent (well CuRobo + CuMotion for mobile manipulation but works for precision dexterity as well) using it -- to generate controlled trajectories around known modeled constraint-violation boundaries. That would give us explicit nominal vs. violation examples to test whether the learned subgoal/value representation actually responds correctly, while automatic curriculum generation could target missing capability combinations or weak regions of the task space.
 
 So essentially: embodied imitation learning from task video for expert review: deviation / constraint-violation detection, performance evaluation, and language-grounded improvement recommendations.
 
 
 Also relevant https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/. I am a partial demo but am working on getting my paper drafted / results for Friday present. Will post demo for this tomorrow / slides.
+
+
