@@ -1,3 +1,51 @@
+Told my research group openly:
+
+Connection to my general research direction:
+Open-Ended Embodied Imitation Learning
+
+(Open-Ended Embodied Learning + Embodied/Robot Imitation Learning)
+-----------------------------------
+
+I treat policy optimization as generalized policy iteration (or value iteration in restricted/fixed-policy settings) over an explicit, structured representation, using MBRL to learn emergent action-conditioned latent dynamics from interaction. The broader objective is to learn object-relational, causal/action-effect, and capability structure that can be retained, edited, and dynamically recomposed online. In particular, I am interested in conceptual blending over reusable object–relation–action and capability components: composing compatible pieces of previously acquired structure into candidate capabilities for novel situations, evaluating those compositions and their counterfactual consequences under learned dynamics and value/energy functions, and explicitly verifying their admissibility and feasibility.
+
+Online I use approximate dynamic programming and MPC over an energy-value landscape.
+Policy improvement is evolutionary rather than gradient-following:
+quality-diversity archives (e.g., QD MAP-Elites with CMA-ES emitters) over
+continuous plan parameters, so improvement maintains a diverse frontier of
+verified solutions instead of a single descent path. The state substrate
+is evolving object-centric and factorized graphs -- factor-graph beliefs and typed scene graphs operating as state-dependent memory (as GNN+transformer representations) -- a learned but construct-constrained memory whose structure can still evolve and emerge. On top of that substrate I learn action-conditioned latent dynamics from interaction (MBRL), supporting counterfactual prediction and the induction and evaluation of structured components -- typed preconditions/effects, options, subgoals, and capabilities over object hierarchical structure i.e. parts, objects, assemblies, affordances, factors (in the factor graph sense) alongside factorization yielding features that are relevant for agent-model--model-world (AMW) improvement. So that the world model (EOG-WAM) can be edited and dynamically recomposed online.
+
+The critical discipline is propose-authorize separation: learned modules only propose and rank, a fixed symbolic layer e.g., ASP (clingo) admissibility plus deterministic numeric feasibility bounds or learned verifier performs admissibility.
+
+This also provides for hybrid simulation (explicit math formulations + learned) in the loop and secondary cadence updates; and externalized simulators like CuRobo, CuMotion, GTSAM (for slam) can operate cleanly in the closed loop under open world partial observability and uncertainty.
+
+Embodied Imitation Learning is the pillar I use explicitly for learning the representation from demonstrations, RLVR or self play, open-ended learning (ACL, UED, intrinsic motivation (the curiosity stuff), co-evolution, etc.) is used to improve the agent for generalization and preparation for adaptation online.
+
+How that instantiates in this pilot
+-----------------------------------
+
+Offline embodied imitation on expert demonstrations trains a
+procedure-conditioned policy/value model over a causal decision
+transformer fused with GTrXL and Mamba-2 memory. The value head regresses a constraint-aware quality-to-go — task return minus a violation/boundary cost-to-go -- a deliberately supervised proxy for the full ADP loop, chosen so the pilot's estimand (does the learned value representation respond correctly at known constraint boundaries?) stays clean and falsifiable. Optimization then moves online in the same propose/verify shape: a deficit-weighted curriculum proposes scenes in weak capability cells; rollouts pass through the ASP verifier and a return-quantile filter
+(ReST / expert-iteration style), so only verified, high-quality behavior
+is ever imitated; and self-play distillation PEFT-adapts the oracle
+reviewer against the verifier's labels. Hard constraints run as a 16-predicate ASP program (clingo, with a deterministic cross-check that
+fails closed), layered with real-time integer programming that sets LP
+feasibility bounds: the LP relaxation certifies what is geometrically
+achievable, the symbolic layer what is procedurally admissible, and their
+gap is the formal signal that a learned behavior has been strategically
+invalidated. Cosmos3-Nano fills the WAM slot (Cosmos-H-Surgical is the
+drop-in oracle id), and cuRobo attaches through the sim-in-the-loop margin
+oracle. Receding-horizon MPC under learned dynamics is the FRONTIER core's role; wiring this policy into that loop is the next step — today the
+pilot's online stage is verifier-filtered adaptation with early stopping
+and best-policy restoration.[4:44 PM]---
+
+
+
+Yep, getting some lunch and then generating input video with overlays.
+
+
+
 For my research direction I told my PhD advisor:
 
 Hi Yezhou,
