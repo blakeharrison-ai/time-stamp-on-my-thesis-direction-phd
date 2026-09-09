@@ -110,6 +110,16 @@ Second Author: Blake Harrison
 Abstract: his innovations on his long term paper with baselines/world action model + imitation learning I design and setup on autonomous driving
 Target Venue: CVPR
 NOTE: inspiration was found from Maryland GAMMA group concerning potential red teaming innovation
+ 
+—
+ 
+Collaboration with Varun.. For me it extends my work from mobile manipulation, UxV (underwater, aerial, rover) also to safe autonomous transport systems (cars but I am more concerned with maritime works as there are many collaborations here for oceanic autonomous research for humanity improving ocean exploration)
+Title: His long term STLDrive work revised
+Lead Author: Varun Jammul
+Second Author: Blake Harrison
+Abstract: his innovations on his long term paper with baselines/world action model + imitation learning I design and setup on autonomous driving
+Target Venue: CVPR
+NOTE: inspiration was found from Maryland GAMMA group concerning potential red teaming innovation
 
 
 —
