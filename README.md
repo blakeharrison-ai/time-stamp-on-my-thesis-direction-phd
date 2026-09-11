@@ -1,3 +1,6 @@
+I said on my present channel C³META: Editable Causal Meta-Utility Value Functions for Compositional Generalization in Multi-Agent Autocurricula (AAMAS soon to publish work - CONFIDENTIAL)
+
+
 Told my research group openly:
 
 Connection to my general research direction:
