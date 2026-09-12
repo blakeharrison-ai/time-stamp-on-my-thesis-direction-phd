@@ -72,19 +72,11 @@ For the first C³RAFT-X paper, the immediate contribution is much narrower: a UE
 Going to need to put together clear visuals and references to existing literature intro I think for the slides.
 
 Also relevant: https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/ and https://github.com/NVIDIA-Medtech/Cosmos-H-Surgical. I have a partial PoC demo, but am working on getting my paper drafted / results ready for Friday’s presentation. Will post the demo tomorrow along with slides. If we go the simulation-generation route, my approach could also use language instructions to condition the generation.
-
 Title: C³META: Editable Causal Meta-Utility Value Functions for Compositional Generalization in Multi-Agent Autocurricula
 Lead author: Blake Harrison
 Abstract: We address language-grounded compositional generalization under out-of-distribution (OOD) shifts in continual, open-ended multi-agent reinforcement learning for open-world autonomous mobile robotics. Existing autocurricula leave unresolved how to value experience’s joint, delayed causal effects on retention, localized editing, selective unlearning, and executable recomposition when agents interfere and prerequisites become valuable only through later learning. We introduce C³META, a meta-utility valuation framework whose novel approximate dynamic programming formulation integrates semantic–causal coupling to learn editable meta-utility value functions. C³META unifies continual OaK-inspired model-based multi-agent reinforcement learning with online multi-agent model predictive control over options. Its counterfactual co-play advantage guides intervention selection by comparing expected fixed-reference retained-capability Pareto hypervolume between candidate and resource-matched substitute learning interventions from a common augmented state. META-WAM, our hybrid of state-space memory and a World Action Model, uses a Bayesian neuro-symbolic, object-centric Scene–Meta–Factor graph transformer to represent these values and predict futures under interventions. Within META-WAM, our novel higher-dimensional cellular-sheaf grammar formulation couples compositional structure, memory, prediction, and causal meta-utility through Gibbs free-energy landscape shaping. This formulation provides a unified algebraic topological encoding of natural-language-grounded objects, relations, affordances, factors, options, concepts, resources, shared knowledge, executable capability components (skills, comprehensions, and task/domain knowledge), and subgoal–value compatibility. META-WAM uses meta-utility-guided Soft-to-Tropical Gauge optimal-transport cross-attention to retrieve and conceptually blend compatible grammars for long-horizon structural causal recomposition through receding-horizon multi-agent planning and control. Under matched training, planning, and control budgets, C³META empirically improves upon autocurricula baselines in zero-update OOD compositional execution and capability preservation across partner generalization, embodied tasks, editing, and unlearning.
 
 Target venue: AAMAS (Oct. 1st abstract, 8th submit) 
-
-
-
-
-
-—
-
 
 
 Title: Meta-Utility Valuation for Multi-Agent Continual Open-Ended Learning and Adaptation in Open-World Autonomous Mobile Robotics: A Game-Theoretic and Approximate Dynamic Programming Perspective
@@ -93,77 +85,62 @@ Abstract:
 Reworking to make clear and crisp focused this month focused on title (my research direction in nut shell)..
 Continual Open-Ended Embodied Learning (OE-EIL) for open-world autonomous mobile agents and multiagent systems---which we introduce as the continual learning, acquisition, composition, editing, unlearning, generalization, and adaptation of executable capabilities and related knowledge from multimodal demonstrations, logs, and experience, toward online-adaptable, admissible behavior, robust OOD generalization, continual capability recomposition, and self-improving, self-reflexive open-world embodied systems---synthesizes literatures spanning open-ended embodied learning, robot imitation learning, and world action modeling. Unlike fixed-task imitation, OE-EIL asks how capabilities persist and expand as worlds, tasks, dynamics, embodiments, instructions, constraints, and preferences change. Partial observability hides state; demonstrations only partially identify goals/rewards and may underdetermine values, dynamics, and skill decompositions. We formalize OE-EIL through offline-to-online approximate dynamic programming, unifying value learning, model-based reinforcement learning, and model predictive control (MPC). Demonstrations and experience from humans, agents, planners, simulators, and environments inform goals, admissibility, preferences, rewards, values, dynamics, capabilities, and representations; World Foundation Models can supply generative priors; parameter-efficient post-training can yield action-conditioned World Action Models (WAMs); MPC closes the prediction--planning--execution loop; and online learning closes adaptation--data acquisition, with simulation and reasoning in the loop. We connect imitation learning with inverse, offline, hierarchical, model-based, and reinforcement learning with verifiable rewards (RLVR), latent actions, neural-filter adapters, inverse graphics, and hybrid simulation. Intrinsic motivation drives exploration; curricula allocate tasks/demonstrations/subgoals; unsupervised environment design generates worlds; quality-diversity maintains repertoires; computational creativity enables combinational, exploratory, and transformational expansion and conceptual blending; and evolutionary RL, self-/co-play distillation, self organization and emergence (e.g. multiagent emergence, adaptive complex systems, synergetics, reaction-diffusion / pattern forming dynamics) around repertoire learning and interactions drive co-adaptation and co-editing. We organize these connections through a reference architecture---language-grounded Neurosymbolic Energy-Object-Graph WAMs (NEOG-WAMs)---integrating abductive learning and ASP; multiscale causal-physical, knowledge, Bayesian/factor, and streaming graphs; object-centric, energy-based, flow, causal, and Decision-Transformer models; spatial graph structures; and affordance--option--capability and part--object--assembly hierarchies for admissibility, reasoning, MPC, editing, and unlearning. Evaluation spans capability-frontier expansion, compositional retention/OOD transfer, uncertainty, safety, adherence, and embodied domains. Finally, we propose agent--model--world co-evolution through continual model--world editing (AMW-MWE). We cover the specific domains of mobile manipulation, UxV navigation (especially humanoid, underwater and aerial), autonomous vehicle systems, and related game AI and procedural world generation. We further explore the domains of autonomous mobile agent safe model editing, mixed-initiative (including co-creative) human-robot settings, and self organizing multiagent AMW-MWE mobile systems. We further discuss energy-based meta-graphs including scene, knowledge, factor, GNN-transformer hybrids and object-centric graph energy landscape shaping using cellular sheaves.
 Target venue: CSUR Journal Survey (End of Oct. target review, with feedback revisions Dec. latest)
+—
+
 
 
 —
-Revising the following more clearly around my research question, gap,  hypothesis and contribution for each, like I did for C³Learn..
+Revising the following more clearly around my research question, gap,  hypothesis and contribution for each, like I did for C³META..
 
 
+Rewriting.. This is about the emergent grammars from interactions and identified self organizations.
+Title: Experience Q&A: Emergent Meta Grammars that Can Self Explain Experience, Self Edit, and Self Improve for Improved Recommendations
+Lead Author: Blake Harrison
+Abstract: 
 
+
+Revision notes:
+Emergent capability of my system.. It can describe its experience from interactions without labels and emerge new and conceptual suggestions.. Can use those suggestions for self editing and self improvement.. I am going to test the reflexivity of this. For example, I can learn on a robotic task and it can tell you its perception of where it failed and why it thinks it did. You can redialog with it as well.. This is why I have been working so much on CAST .. emergence at this level needs to be safe. Exploring this emergent phenomenon for CVPR as primary meta-utility valuation and adaptation focus along side transformational editing and r.
+
+Graph grammars are widely used to design large-scale interactive worlds for media and simulation, yet when multiple domains are combined they are often done so in ways that collapse quality-diverse contributions from either. This limits quality-diverse coverage and prevents the grammar itself from adapting as worlds evolve in a transformational creative manner. We introduce Graph Field Grammars (GfG), a semi- and self-supervised neurosymbolic object-graph blending framework that learns a field over typed spatiotemporal graph-rewrite events, with hierarchical latent field-theoretic creation, interaction, and deletion operators for inverse procedural modeling of 4D worlds for blending that are assigned meta object class compositions online through bidirectional procedural generation---reconstruction. GfG operationalizes computational creativity through three coupled processes: blending aligns and recombines motifs across source grammars; exploration uses quality-diversity MPC-based search to discover high-value derivations within the current grammar; and transformation adds, removes, or retypes symbols, productions, and constraints to make previously unreachable world families generable. GfG learns and revises grammars through self-play, self-improvement, and co-creative emergent multi-agent interaction, while a neurosymbolic verifier enforces local geometric and semantic constraints and global topological, physical, temporal, and natural-language context, task constraints, goals and subgoal decomposition descriptions in a hybrid simulator. On the PCG Benchmark and a procedural 4D-world suite implemented in Blender Geometry Nodes and Infinigen, GfG improves valid multi-design-space coverage, controllability, cross-grammar motif retention, and language-conditioned constraint satisfaction over classical and learned graph grammars, Graph and RL based PCG, and quality-diversity baselines. Moreover, GfG further supports local grammar editing and subtree-level revision without retraining from scratch, enabling procedural 4D worlds to blend, explore, and transform multi-design spaces adaptively and dynamically online.
+Target Venue: CVPR
+
+—
 
 Rewriting.. This is the ability for open-world autonomous mobile agents to safely edit and unlearn continually with the core heart being certified optimal transport mass inclusion and improved partially identification (through total system dynamics modeling)
 Title: CAST-MPC: Capability Transfer and Retraction under Partial Identification for Multi-Agent Continual Learning Safe Emergence
 Lead author: Blake Harrison
 Abstract: Neurosymbolic Object-Graph World Action Models (NeSOG-WAMs) give embodied agents language-grounded options, yet expanding options across instances requires knowing which remain admissible under partially identified structure and dynamics. Offline-to-online control penalizes unfamiliarity, not admissibility — dynamic feasibility, constraint-validity, reachability, recoverability — transfer aligns correlated appearance and latent dynamics, not invariant causal structure. We introduce CAST-MPC, a 4D causal-physical scene-graph WAM, transfers admissibility evidence only across causally probed invariant structure child subgraphs inherit from shared parents, enrolling verified options on children and hypothetical compositions of capability-bearing parts, executing only when closed-loop trajectories are admissible under every credible graph–mechanism hypothesis. From RGB-D, language, interaction, bidirectional counterfactual imagination induces credible graph–mechanism hypotheses — object-factorized scene-graph program mixtures instantiating hybrid finite-element–graph-neural simulation — and forward re-simulation reweights them. Newtonian re-simulation verifies dynamic feasibility and answer-set programs constraint-validity over Yoshida 4th order approximate integrator(revising this to drive grounding mass likelihood for admissible transport mass inclusion that is strongly lookahed consistent), while interventional probes verify invariance of the inherited object–affordance hierarchy — relational structure, features, topology; executable capabilities composed from skills, knowledge, options. Partial optimal transport aligns verified structure across siblings with per-plan provenance; offline, a normalizing flow learns belief-conditioned HJB-viscosity values; online, a learned abduction head predicts membership in the calibrated admissible transport mass, whose density proxies transfer trust-region support, weighting reachable tubes gating Gibbs-energy scenario-tree tube-MPC. Edit contracts invert these flows, propagating revocation through capability cones to re-verification — enrollment and retraction, one transport, forward and inverse. Across Isaac Lab, ManiSkill-HAB, LIBERO, and Infinigen-Articulated, CAST-MPC enrolls options zero-shot, improves task- and instruction-shift generalization, reduces unsafe, irrecoverable executions, and enables recomposition-robust, transfer-preserving retraction.
-Target venue: CVPR 
+Target venue: ICML 
 —
 
-(Combining these two concepts now for CVPR)
-
-
-Rewriting.. This is about the emergent grammars from interactions and identified self organizations.
-Title: Multi-Agent Emergent Graph Field Grammars: Co-Creative Learning to Blend, Explore, and Transform Procedural 4D Worlds
+Title: Placeholder
 Lead Author: Blake Harrison
-Abstract: Graph grammars are widely used to design large-scale interactive worlds for media and simulation, yet when multiple domains are combined they are often done so in ways that collapse quality-diverse contributions from either. This limits quality-diverse coverage and prevents the grammar itself from adapting as worlds evolve in a transformational creative manner. We introduce Graph Field Grammars (GfG), a semi- and self-supervised neurosymbolic object-graph blending framework that learns a field over typed spatiotemporal graph-rewrite events, with hierarchical latent field-theoretic creation, interaction, and deletion operators for inverse procedural modeling of 4D worlds for blending that are assigned meta object class compositions online through bidirectional procedural generation---reconstruction. GfG operationalizes computational creativity through three coupled processes: blending aligns and recombines motifs across source grammars; exploration uses quality-diversity MPC-based search to discover high-value derivations within the current grammar; and transformation adds, removes, or retypes symbols, productions, and constraints to make previously unreachable world families generable. GfG learns and revises grammars through self-play, self-improvement, and co-creative emergent multi-agent interaction, while a neurosymbolic verifier enforces local geometric and semantic constraints and global topological, physical, temporal, and natural-language context, task constraints, goals and subgoal decomposition descriptions in a hybrid simulator. On the PCG Benchmark and a procedural 4D-world suite implemented in Blender Geometry Nodes and Infinigen, GfG improves valid multi-design-space coverage, controllability, cross-grammar motif retention, and language-conditioned constraint satisfaction over classical and learned graph grammars, Graph and RL based PCG, and quality-diversity baselines. Moreover, GfG further supports local grammar editing and subtree-level revision without retraining from scratch, enabling procedural 4D worlds to blend, explore, and transform multi-design spaces adaptively and dynamically online.
-Target Venue: CVPR
+Abstract: …
+Target Venue: SIGGRAPH
 
-—
-
+Title: Placeholder
+Lead Author: Blake Harrison
+Abstract: …
+Target Venue: IEEE CoG
 
 Rewriting.. This is the ability for open-world autonomous mobile robotics to co-edit, self reflect (self reflexive) and co-evolve (self improve) both multi-agent-WAM/hybrid sim and mixed-initiative (co-creative example) human-agent-WAM
 Title: Universe in a Bottle: Joint Editing and Unlearning of World Model–Simulator Pairs in Coevolving Multi-Agent Systems
 Lead Author: Blake Harrison
 Abstract: Neurosymbolic Object-Graph World Action Models (NeSOG-WAMs) are strongly amiable to co-evolve with the hybrid simulators that train them under self-/co-play and improvement—explicit physics and neurosymbolic domain, implementation and generator programs coupled with learned generation under scaled verifiable-reward, proxy policies or direct value loops: a universe in a bottle. Yet editing and unlearning target artifact—the simulator re-teaches what the model removes, the model regenerates what the simulator removes—and address weights or beliefs, not the generative source both compile from; while single-artifact verifiers ignore the closed loop. We introduce Universe in a Bottle (UIB) which the pair itself are considered the joint-edit object under executable-capability value and transformational creativity progression objectives under language-grounded shared editable factorized object-graph meta (OGM) structure. Self supervised multi-agent language games evolve an emergent interaction language that is bound by OGM, whose co-evolved addressable meta-grammar that generates and adapts verified worlds and coupled model-based agents. The grammar is further made intelligible by PeFT latent bridge adaption to a common multimodal embedding space and made answer set program (ASP) compliant through a learned resolver. OGM itself includes addressable primitives, causal preconditions, and compositions. Deductive programs can thus be written adapting the shared configuration of the world and agents. Both members recompile from the edited graph: revision rewrites productions; removal deletes them along with their generative descendents, provenance bounding collateral through recursive lexical analysis. Von Neumann meta classes are further assigned to aggregate groupings based on spectral similarity for addressable class level organizations. Online a universal meta-adaptive controller chooses among, revising, regenerating, and unlearning, deferring transient inconsistency to downstream neural-symbolic MPC that integrates a non-linear kernel projection of the ASP program to fuzzy logic resolve likely adaptive ideal hyper parameter set membership. Open-ended online meta adaptive verification is closed loop: a deductive solver adversarial red-team verifies post-edit rollouts on secondary cadence. Across diverse embodied tasks (navigation, manipulation and automated resource planning) MiniHack, Crafter, IsaacLab-FORGE/Behavior, MineDojo, RoboCasa365, Maniskill-Hab and CARLA; partially observable complex tasks over long-horizons, UIB sustains generation validity, resists relearning attacks that defeat unilateral editing, unlearning, and fine-tuning, and preserves retained executable-capabilities over long horizon multi-step tasks under shifting natural-language instruction, constraints and context—establishing joint editability as a measurable property of model—simulator pairs.
-Target Venue: ICML, Backup CoRL
+Target Venue: IROS, Backup CoRL
 —
 
-Rewriting.. This is about infinite extended sparse growing graph memory that is state-dependent memory innovation with local streamed dense voxel representation, the David Ha work years ago with Kevin was onto something here.. this needs to neural evolve but with graph construction that can edit/unlearn.. Boltzmann Machines are onto something here also.. we need a new form of distributed construction.. 
-Title: TuRTLE-MEM: Multiagent Shared World Provenance-Closed Voxel Memory Editing and Trajectory Unlearning for Mixed-Initative Multi-Agent Robotics
+Title: Prior Workshop I mentioned with masters student help - readding
 Lead Author: Blake Harrison
-Abstract: Lifelong open-ended robots accumulate unbounded memory that must persist, adapt, and stay editable as maps drift, sensors wear, and objects and instructions change. Object-centric and growing representations rarely address streaming scale, locality precision, or stale-information rollup. We introduce KALEDO-MEM, which folds memory editing and trajectory unlearning into the model predictive control (MPC) loop, adapting residual fidelity and rollup aggregation over a robot's lifetime. A versioned observation–value–action 4D causal scene graph–spatio-temporal action graph (4DSG-STAG), with age-weighted message passing, spans object-indexed multi-SDF voxels and tetrahedrons based on locality, a sparser multi-TSDF interactive layer, and a far-field sparse GNN. Edits block stale retrieval, retract descendant support, and recompute dependent factors; deletion contracts purge descendants; an audit transformer memory logs every edit's factor-graph membership. A compositional energy functional drives differentiable MPC ranking, with learned language-preference and constraint-kernel projections gating cross-layer self-attention, while periodic boosted-ensemble interventional probing resolves contradictions by lead vote. Across OmniGibson/BEHAVIOR-1K, SUMO–OpenStreetMap–CARLA, HoloOcean, nuPlan, Isaac Lab, ManiSkill-HAB, MineDojo stress tests, and OpenStreetMap edits, KALEDO-MEM limits task drift, improves long-horizon compositional reasoning under distribution shift over scene-graph, map-maintenance, replay, editing/unlearning, and streaming SLAM/VSLAM baselines, and better retrieves and retains executable capabilities out-of-distribution on navigation, mobile manipulation, and real2sim2real drone navigation under changing language-conditioned instructions.
-Target Venue: IROS (CoRL backup) - revising better title and use World Foundation Model RLVR distillation to NeSOG-WAM and more fundamental memory contribution over graphs (integrating local voxels and global graph) and for multiagents
+Abstract: …
+Target Venue: NeurIPS Workshop
 
-Title: Placeholder for IEEE CoG Talk to your Robot: Bi-Directional Multi-Agent Emergent Curriculum Generation and Social Dialog Interactions for Mixed-Initiative Open-World Mobile Robotics
-Lead Author: Blake Harrison 
-Abstract: ..
-Target Venue: IROS, backup CoRL
-
-
-Title: Placeholder for IEEE CoG FACTIONs: Bi-Directional ProcGen paper for co-creative world multiagent co-evolution and co-exploration
-Lead Author: Blake Harrison 
-Abstract: Paper on my concept of electrodynamics / active matter for multiagent open-world PCG as framework for studying social dynamics emergence
-Target Venue: IEEE CoG
-
-—
- 
-Collaboration with Varun.. For me it extends my work from mobile manipulation, UxV (underwater, aerial, rover) also to safe autonomous transport systems (cars but I am more concerned with maritime works as there are many collaborations here for oceanic autonomous research for humanity improving ocean exploration)
-Title: His long term STLDrive work revised
-Lead Author: Varun Jammul
-Second Author: Blake Harrison
-Abstract: his innovations on his long term paper with baselines/world action model + imitation learning I design and setup on autonomous driving
-Target Venue: CVPR
-NOTE: inspiration was found from Maryland GAMMA group concerning potential red teaming innovation
-
-
-Title: Future placeholder for 2x CoRL
-Lead Author: Blake Harrison 
-Abstract: ..
+Title: BORG
+Lead Author: Blake Harrison
+Abstract: …
 Target Venue: CoRL
 
-Title: Bringing this one back to work with masters students
-Lead Author: Blake Harrison 
-Abstract: ..
-Target Venue: NeurIPS workshop
 
 
 —
