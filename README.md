@@ -121,7 +121,7 @@ Target Venue: SIGGRAPH
 Title: Placeholder
 Lead Author: Blake Harrison
 Abstract: …
-Target Venue: IEEE CoG
+Target Venue: IEEE CoG 
 
 Rewriting.. This is the ability for open-world autonomous mobile robotics to co-edit, self reflect (self reflexive) and co-evolve (self improve) both multi-agent-WAM/hybrid sim and mixed-initiative (co-creative example) human-agent-WAM
 Title: Universe in a Bottle: Joint Editing and Unlearning of World Model–Simulator Pairs in Coevolving Multi-Agent Systems
