@@ -48,8 +48,7 @@ and best-policy restoration.[4:44 PM]---
 Yep, getting some lunch and then generating input video with overlays.
 
 Told my research group via slack today:
-
-I came up with acronym, introducing in CSUR survey to explain my research program more transparently and clearly following the convergence of mature communities. I am doing my survey on this also so will define more formally with clear visualizations and connect machinery convergence there:
+I came up with acronym, introducing in CSUR synthesis survey to explain my research program more transparently and clearly following the convergence of mature communities. I am doing my  survey on this also so will define more formally with clear visualizations and connect machinery convergence there:
 
 XCMUVA-EMAS — Explainable Continual Multi-Utility Valuation and Adaptation in Embodied Multi-Agent Systems
 
