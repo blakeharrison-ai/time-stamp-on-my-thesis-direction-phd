@@ -6,6 +6,15 @@ Told my research group openly:
 Connection to my general research direction:
 Open-Ended Embodied Imitation Learning
 
+
+told BNI team:
+
+This is the raw interactive vis I built with our trained recommendation agent.. it is working but the recommendation and error are currently myopic (I had it synthesize ideal plan for procedure with milestones and forgot to recode it to measure tension, force, approach, etc. within the subgoals in each step).. retraining that in a few which takes ~2 hours or so. Will repost with that once complete this am.
+[7:49 AM]The vis update in realtime and allow for expert panel feedback and has a summary of performance at the end as well. (edited) 
+Blake Harrison  [7:55 AM]
+I had it generate ASP then LLM Modulo style verify that it was valid for the goals like in my CVPR draft.. once you do it once you don't need to replan again over long horizons (like task or domain complete shifts) and can continue to use multi-shot ASP on secondary cadence feeding MPC.. really cool
+[7:56 AM]i.e. we don't need to necessarily verify low level performance.. only task or domain level and then it can self verify (edited)
+
 (Open-Ended Embodied Learning + Embodied/Robot Imitation Learning)
 -----------------------------------
 
