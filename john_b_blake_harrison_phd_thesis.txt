@@ -1,3 +1,26 @@
+
+Hi Yezhou,
+
+I now have a clearer framing for my PhD research:
+
+**Short version:** Trustworthy Semantic–Causal World Modeling
+
+**Long version:** Trustworthy Semantic–Causal World Models for Open-World Embodied Multi-Agent and Human–AI Teams
+
+My research asks how embodied teams can continually acquire, retain, and recombine capabilities as tasks, environments, and collaborators change, while respecting explicit individual and team constraints.
+
+The proposed central contribution is **causal meta-utility learning**: learning value functions that guide what agents learn, edit, or selectively unlearn by estimating the delayed effects on retained, executable capabilities and their recombination in unfamiliar situations. These estimates compare alternative interventions from the same learner checkpoint under matched resource budgets.
+
+My approach combines **neuro-symbolic, object-centric world models, continual model-based multi-agent reinforcement learning, and model-predictive control**. The models ground objects, relationships, skills, and task constraints in perception and language. Graph and cellular-sheaf representations model dependencies and compatibility across agents, while self-play, co-play, and causal interventions support continual improvement. Symbolic admissibility checks and simulator-verifiable rewards guide learning and planning, complemented by human preferences and expert feedback.
+
+My hypothesis is that this approach improves compositional generalization while preserving useful capabilities and reducing constraint violations relative to matched-budget baselines. The broader goal is mixed-initiative and co-creative collaboration that combines complementary expertise, supports reliable execution of expert procedures, and proposes novel strategies for evaluation and expert review—with traceable decisions, constraints, and supporting evidence.
+
+My previous slides did not make this contribution clear. I’m revising them around this framing and the motivation **“It Takes a Village to Capture Expertise,”** and will send them later today.
+
+
+above is my formulated clear and crisp research direction
+
+
 told BNI team in my group:
 
 This is the raw interactive vis I built with our trained recommendation agent.. it is working but the recommendation and error are currently myopic (I had it synthesize ideal plan for procedure with milestones and forgot to recode it to measure tension, force, approach, etc. within the subgoals in each step).. retraining that in a few which takes ~2 hours or so. Will repost with that once complete this am.
