@@ -152,7 +152,7 @@ Title: Friendly BORG
 Lead Author: Blake Harrison
 Abstract: WIP Self reflexive no-human-in-loop systems continual explainable human editable multi-agent autonomous open-world mobile robotics
 Target Venue: CoRL
-
+ 
 
 —
  
