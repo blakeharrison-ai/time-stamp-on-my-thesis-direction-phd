@@ -88,7 +88,7 @@ I came up with acronym, introducing in CSUR synthesis survey to explain my resea
 
 Told PhD Team for research direction:
 
-(Breaking into 2 papers in my Trustworthy Semantic–Causal World Modeling research direction)
+(Breaking into 2 papers in my Trustworthy Semantic–Causal World Modeling research direction as there is natural split here as two papers along my autocurricula objective and unified representation as cellular sheaves)
 Title: C³META: Editable Causal Meta-Utility Value Functions for Continual Compositional Generalization in Open-Ended Explainable Embodied Multi-Agent Systems
 Lead author: Blake Harrison
 Abstract: Open-world mobile robot teams must revise capabilities and coordinate with changing partners under out-of-distribution (OOD) shifts, yet how intervention and team revision order affect later recomposition remains unclear. We hypothesize that valuing delayed causal effects of acquisition, editing, and selective unlearning on retained capability--knowledge frontier expansion improves zero-shot compositional generalization. We propose C³META, a hybrid simulative–generative approximate dynamic programming framework connecting model-based MARL and multi-agent MPC through neuro-symbolic meta-utility option--subgoal--value guided open-ended autocurricula for continual post-training of world foundation and world action models (WAMs). META-WAM, our neuro-symbolic object-centric scene–meta–factor bipartite graph world action model, couples abstract graph-transformer memory with Bayesian factor graphs inducing variational Gibbs free-energy landscapes, integrating Hodge-spectral cellular sheaves that encode addressable semantic-algebraic grammar over object relations, option--subgoal values, capabilities, contextual knowledge, and teammate beliefs. Causal-physical co-play, neuro-symbolic admissibility, and latent predictive representation learning ground these grammars in natural language, symbols, question-and-answering interfaces, and executed reinforcement learning interactive experience. Our curriculum estimand is the infinite-horizon discounted retention-adjusted capability Pareto-hypervolume advantage of candidate over resource-matched substitute interventions under a fixed reference and shared adaptive continuation. Structural counterfactual futures from common joint latent state checkpoints estimate this effect by conceptual blending grounded experience, retrieved latent memory, and generative imagination-augmentation with current experience through an online active-perception loop. Under matched budgets, C³META improves zero-shot capability--knowledge recomposition generalization, quality-diverse retention, self explainable coordination, review and recommended self and team improvement, and language context and instruction adaptation under OOD shifts against generative value learning and open-ended curriculum baselines without degrading in-distribution performance.
@@ -97,6 +97,8 @@ Target venue: CVPR
 
 Title: Trustworthy Semantic–Causal World Models for Open-World Embodied Multi-Agent and Human–AI Teams: A Survey
 Subtitle: A Neuro-Symbolic Causal Meta-Utility Value, Object-Centric Game Theoretic, and Approximate Dynamic Programming Perspective 
+
+
 Lead author: Blake Harrison
 Abstract: 
 Revising survey abstract this weekend to mirror existing nice survey and relevant content here..
@@ -150,6 +152,7 @@ Title: Friendly BORG
 Lead Author: Blake Harrison
 Abstract: WIP Self reflexive no-human-in-loop systems continual explainable human editable multi-agent autonomous open-world mobile robotics
 Target Venue: CoRL
+
 
 
 —
