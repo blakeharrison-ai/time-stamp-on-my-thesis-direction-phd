@@ -154,7 +154,6 @@ Abstract: WIP Self reflexive no-human-in-loop systems continual explainable huma
 Target Venue: CoRL
 
 
-
 —
  
 Collaboration with Varun.. For me it extends my work from mobile manipulation, UxV (underwater, aerial, rover) also to safe autonomous transport systems (cars but I am more concerned with maritime works as there are many collaborations here for oceanic autonomous research for humanity improving ocean exploration)
