@@ -97,7 +97,7 @@ Other baselines: https://openreview.net/forum?id=xT8BEgXmVc, ObjectZero, MAZero,
 Open-Ended paper UED/Autocurricula extension paper connection: https://arxiv.org/abs/2303.03376
 Interactive video world gen connection: https://research.nvidia.com/labs/sil/projects/gamma-world/, https://arxiv.org/abs/2608.08600
 Video Gen Architectures: https://huggingface.co/Lightricks/LTX-2.3, (wann 2.2) https://wan.video/research-and-open-source
-FACTS (state-state memory) https://proceedings.iclr.cc/paper_files/paper/2025/hash/ac58b418745b3e5f10c80110c963969f-Abstract-Conference.html?utm_source=chatgpt.com
+FACTS (state-state memory) https://proceedings.iclr.cc/paper_files/paper/2025/hash/ac58b418745b3e5f10c80110c963969f-Abstract-Conference.html?utm_source=chatgpt.com, Graph Transformer / Graph-Mamba
 
 Title: Trustworthy Semantic–Causal World Models for Open-World Embodied Multi-Agent and Human–AI Teams: A Survey
 Subtitle: A Neuro-Symbolic Causal Meta-Utility Value, Object-Centric Game Theoretic, and Approximate Dynamic Programming Perspective 
