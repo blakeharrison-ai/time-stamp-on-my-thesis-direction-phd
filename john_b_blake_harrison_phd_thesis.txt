@@ -134,7 +134,7 @@ Evaluation benchmark for complex multiagent world models using video games and R
 Lead Author: Blake Harrison
 Abstract: This is revision of my prior ongoing project with masters students, this year we will complete
 Target Venue: NeurIPS Main conference (workshop backup)
-
+ 
 
 
 Rewriting.. This is the ability for open-world autonomous mobile robotics to co-edit, self reflect (self reflexive) and co-evolve (self improve) both multi-agent-WAM/hybrid sim and mixed-initiative (co-creative example) human-agent-WAM
