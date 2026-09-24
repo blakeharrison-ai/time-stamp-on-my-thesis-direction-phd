@@ -14,6 +14,8 @@ Interactive video world gen connection: https://research.nvidia.com/labs/sil/pro
 Video Gen Architectures: https://huggingface.co/Lightricks/LTX-2.3, (wann 2.2) https://wan.video/research-and-open-source
 FACTS (state-state memory) https://proceedings.iclr.cc/paper_files/paper/2025/hash/ac58b418745b3e5f10c80110c963969f-Abstract-Conference.html?utm_source=chatgpt.com, Graph Transformer / Graph-Mamba 
 
+also found inspiration from: https://arxiv.org/html/2602.10982v1
+
  
 Title: Trustworthy Semantic–Causal World Models for Open-World Embodied Multi-Agent and Human–AI Teams: A Survey
 Subtitle: A Neuro-Symbolic Causal Meta-Utility Value, Compositional Game Theoretic, and Object-Centric Approximate Dynamic Programming Perspective 
