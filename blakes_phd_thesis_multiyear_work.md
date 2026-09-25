@@ -1,5 +1,11 @@
 I shared this with team for Fall 2026 / Early Spring 2027 team doc of my work
 
+I shared also with team on open slack channel:
+
+Blake Harrison  [3:36 AM]
+I found a solid alternative that seems reliable, which I’m using as my primary baseline/architectural bridge: M3W (https://openreview.net/pdf?id=fi24ry0BX5). The MAMBA → MARIE → DIMA line is also highly relevant.
+For the visual world-model side, I’m using NVIDIA γ-World (https://research.nvidia.com/labs/sil/projects/gamma-world/) as a contemporary multi-agent visual-generation comparison, alongside the Cosmos transfer/foundation-model stack.
+
 I found my primary baseline that fits 3/4 of my drafts!.. Should have their paper results by tomorrow (Sept 24) then deriving my (one by one mechanisms) contribution and evaluating different aspects
 
 Baseline Choice: https://icml.cc/virtual/2026/poster/61713 (using this as primary baseline)
