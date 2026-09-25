@@ -58,10 +58,11 @@ Lead Author: Blake Harrison
 Abstract: Placeholder for my self explainability paper for multi-agent systems for IROS
 Target Venue: IROS
 
-Placeholder for my new recurrent state-space memory (transformer + neural computer hybrid that works ideal with my symbolic state-space memory concept) and retrieval paper for multiagent mobile robotics
+Placeholder for my new recurrent state-space memory (transformer + neural differentiable computer hybrid that works ideal with my symbolic state-space memory concept) and retrieval paper for multiagent mobile robotics and supports cellular automata
 Lead Author: Blake Harrison
 Abstract: Placeholder for my self explainability paper for multi-agent systems for IROS
 Target Venue: CoRL
+
 
 Placeholder follow up human-AI paper
 Lead Author: Blake Harrison
