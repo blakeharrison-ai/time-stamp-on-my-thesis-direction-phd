@@ -2,11 +2,12 @@ I shared this with team for Fall 2026 / Early Spring 2027 team doc of my work
 
 I told team in open channel:
 I told team on slack channel update:
+I told team on slack channel update:
 
 I found a solid alternative that seems reliable, which I’m using as my primary baseline and architectural bridge to derive my contribution from DIMA (https://arxiv.org/abs/2505.20922). The line traces nice from Dreamer to MAMBA through MARIE to DIMA.
 
 For the visual world model side, I’m using NVIDIA γ-World (research.nvidia.com/labs/sil/projects/gamma-world) as a contemporary multi-agent visual-generation comparison, alongside the Cosmos transfer/foundation-model stack. (edited)
-For the visual world model side, I’m using NVIDIA γ-World (research.nvidia.com/labs/sil/projects/gamma-world) as a contemporary multi-agent visual-generation comparison, alongside the Cosmos transfer/foundation-model stack. (edited)
+
 I found my primary baseline that fits 3/4 of my drafts!.. Should have their paper results by tomorrow (Sept 24) then deriving my (one by one mechanisms) contribution and evaluating different aspects
 
 Baseline Choice: https://icml.cc/virtual/2026/poster/61713 (using this as primary baseline)
