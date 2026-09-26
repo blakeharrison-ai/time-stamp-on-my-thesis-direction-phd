@@ -6,6 +6,7 @@ I found a solid alternative that seems reliable, which I’m using as my primary
 For the visual world model side, I’m using NVIDIA γ-World (research.nvidia.com/labs/sil/projects/gamma-world) as a contemporary multi-agent visual-generation comparison, alongside the Cosmos transfer/foundation-model stack. (edited)
 For the visual world model side, I’m using NVIDIA γ-World (research.nvidia.com/labs/sil/projects/gamma-world) as a contemporary multi-agent visual-generation comparison, alongside the Cosmos transfer/foundation-model stack. (edited)
 For the visual world model side, I’m using NVIDIA γ-World (research.nvidia.com/labs/sil/projects/gamma-world) as a contemporary multi-agent visual-generation comparison, alongside the Cosmos transfer/foundation-model stack. (edited)
+For the visual world model side, I’m using NVIDIA γ-World (research.nvidia.com/labs/sil/projects/gamma-world) as a contemporary multi-agent visual-generation comparison, alongside the Cosmos transfer/foundation-model stack. (edited)
 Baseline Choice: https://icml.cc/virtual/2026/poster/61713 (using this as primary baseline)
 Other baselines: https://openreview.net/forum?id=xT8BEgXmVc, ObjectZero, MAZero, etc. (MuZero, TD-MPC2/Newt, Flow-Actor-Critic, Diffusion Sheaves, Dreamer lines also)
 Open-Ended paper UED/Autocurricula extension paper connection: https://arxiv.org/abs/2303.03376
