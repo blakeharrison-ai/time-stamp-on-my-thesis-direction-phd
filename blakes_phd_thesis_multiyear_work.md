@@ -29,6 +29,7 @@ Target Venue: CVPR
 
 
 
+
 Title: Trustworthy Semantic–Causal Programmable Multi-Agent World Models for Open-World Embodied Multi-Agent and Human–AI Teams: A Survey
 Subtitle: A Neuro-Symbolic Causal Meta-Utility Value, Compositional Game Theoretic, and Object-Centric Approximate Dynamic Programming Perspective 
 Lead author: Blake Harrison
