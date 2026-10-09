@@ -22,11 +22,13 @@ also found inspiration from: https://arxiv.org/html/2602.10982v1
 also https://link.springer.com/article/10.1007/s11634-013-0134-6
 
  I found my primary baseline that fits 3/4 of my drafts!..
+
 Title: Universe in a Bottle: Neuro-Symbolic Revision-Persistent Programmable Multi-Agent Visual World Models
 Lead Author: Blake Harrison
 Abstract: Multi-agent visual world models must revise shared knowledge without reintroducing obsolete interpretations during continual learning and capability recomposition. Preserving exact, jointly consistent symbolic revisions while adapting learned latent representations and dynamics without degrading protected capabilities or their supporting knowledge remains challenging. We introduce Universe in a Bottle (UIB), a programmable neuro-symbolic multi-agent visual world model that couples symbolically guided adaptation of multimodal vision–language latent representations with independently revisable symbolic semantics and meta-utility through versioned symbolic state-space memory. Contract-checked local-to-global polygraphic rewriting propagates revisions across dependent capabilities and knowledge, committing shared versions only after finite verification of declared symbolic dependencies. Our mixture-of-experts approximate dynamic programming retrieval formulation unifies offline and off-policy multi-agent inverse reinforcement learning of meta-utility value with evolutionary quality-diverse counterfactual imagination, using hierarchical object-centric lookahead for fixed-point robustification. Differentiable multi-agent model predictive control generates abductively grounded, symbolically admissible rollouts within continuous semantic basins of an emergent Gibbs–Boltzmann free-energy multimodal latent landscape. As symbolic revisions occur, predicate-conditioned cellular sheaf compatibility energies serve as state costs in symbolically constrained operator-algebraic entropic transport relative to version-conditioned world-agent-action dynamics. A causal trajectory denoiser trained with diffusion forcing against this transport objective approximates its commutative path-space formulation, reorganizing latent belief and counterfactual trajectories across these basins within a sliding window.
 Under matched training budgets, UIB improves joint-revision persistence after continued learning and editing, post-revision retention and transfer of protected capabilities and supporting knowledge, and out-of-distribution team compositional generalization over programmable memory and multi-agent visual world model baselines.
 Target Venue: CVPR
+
 
 
 
