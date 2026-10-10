@@ -1,7 +1,26 @@
 I told my teammate:
 
-Makes sense. In my case, I want latent transitions AND symbolic–causal action grounding, so embodied teammates can communicate through shared semantic meanings, track joint edit versions exactly, and support programmable, safe, constrained emergence.
+Blake Harrison  [8:47 PM]
+@chuan166 I missed part of the conversation.. I suggested TD-MPC2 because I thought priyank had trained myopic rollouts not accounting for infinite discounted horizon, telescoping or a terminal cost-to-go approximator. I have had a lot of success using MPC but I do approximate dynamic programming value learning independently and then use that over latent-space MPC (MPPI or CEM).. in that case you can use any time of generator (I go what I am calling our "value-transformer" as simplified Decision-Transformer style generator) integrated into inverse multi-agent MBRL loop.. that works really well.
 
+You can also go for flow actor critic, diffusion actor critic, evolutionary algorithms (I go for these to separate behavioral quality diversity), approximate value iteration with approximate EM formulation, continuous HJB viscocity fixed point contraction, primal dual fixed point contraction, etc. the point is you do some kind of value learning and then you use that in continuous latent-space over rollout. (edited) 
+9 repliesPriyank Patel  [8:54 PM]
+Thanks for sharing this Blake, like you mentioned currently I am training the model to just predict the next latent state. I haven't considered the approach you mentioned above but will look into it!
+Blake Harrison  [8:54 PM]
+oh yeah nope
+Chi-Yao Huang  [8:56 PM]
+Here is a misunderstanding. Currently, we care more about the performance of WM rather than planner. Bad planning performance does not mean WM learn in a bad way. Any kind of planners are fine. The point is how to make sure our WM learn the thing we want.
+Blake Harrison  [8:57 PM]
+right.. but if you are doing planning during WM latent dynamics learning that impacts it
+Chi-Yao Huang  [8:59 PM]
+So we not only care the latent dynamic. We care what we want to learn. In Priyank's case, we care if WM learn medium, which any planner cannot show that.
+Blake Harrison  [9:00 PM]
+You mean apart from value function
+[9:00 PM]just the latent transition dynamics
+Chi-Yao Huang  [9:02 PM]
+You can say that. We are not only focus on latent transition but something else in latent space. In Priyank's case, he want the latent transition AND transition in the medium. In my case, I want the latent transition AND transition in the spatial-aware way.
+Blake Harrison  [9:33 PM]
+Makes sense. In my case, I want latent transitions AND symbolic–causal action grounding, so embodied teammates can communicate through shared semantic meanings, track versioned joint revisions exactly, and support programmable, safe, constrained emergence.
 
 I shared this with team for Fall 2026 / Early Spring 2027 team doc of my work
 
