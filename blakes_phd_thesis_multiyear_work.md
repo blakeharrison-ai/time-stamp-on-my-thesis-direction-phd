@@ -1,6 +1,6 @@
 I told my teammate:
 
-Makes sense. In my case I want latent transitions AND symbolic–causal action grounding, so embodied teammates can communicate through shared semantic meanings and can track joint edit versions exactly and programmable safe, constrained emergence.
+Makes sense. In my case, I want latent transitions AND symbolic–causal action grounding, so embodied teammates can communicate through shared semantic meanings, track joint edit versions exactly, and support programmable, safe, constrained emergence.
 
 
 I shared this with team for Fall 2026 / Early Spring 2027 team doc of my work
