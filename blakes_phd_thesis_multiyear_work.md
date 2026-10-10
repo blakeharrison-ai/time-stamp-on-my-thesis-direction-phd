@@ -45,7 +45,7 @@ I found solid alternative that seems reliable and well written I am using instea
 also found inspiration from: https://arxiv.org/html/2602.10982v1
 also https://link.springer.com/article/10.1007/s11634-013-0134-6
 
- I found my primary baseline that fits 3/4 of my drafts!..
+I shared formally in group shared research progress doc:
 
 Title: Universe in a Bottle: Joint Revision Persistence in Programmable Multimodal Neuro-Symbolic Multi-Agent World Models
 Lead Author: Blake Harrison
