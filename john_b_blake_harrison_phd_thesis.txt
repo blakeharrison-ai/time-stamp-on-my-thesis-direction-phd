@@ -6,8 +6,9 @@ For the visual world model side, I’m using NVIDIA γ-World (research.nvidia.co
 
 Stealth mode concepts exploring..
 
+Major CoRL paper
 Grokking paper from my conceptual space
-Grokking with full diversification perfect indicator function as curious waves as fourier space features.. competition and Grokking with fourier components at small random amplitudes with random racing against each other and winner determined by initial magnitude and inititual component and phase misalignment.. as mechanism ensemble boosted AI civilization
+Grokking with full diversification perfect indicator function as curious waves as fourier space features.. competition and Grokking with fourier components at small random amplitudes with random racing against each other and winner determined by initial magnitude and inititual component and phase misalignment.. as mechanism ensemble boosted AI civilization so Grokking as a boosted mixture-of-experts.. potentially an ensemble
 
 
 
