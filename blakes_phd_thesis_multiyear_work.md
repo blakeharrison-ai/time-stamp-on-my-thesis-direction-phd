@@ -81,7 +81,7 @@ Target venue: IROS
 
 - - -
 
-(Below not yet active preview for next term planned but only the self explainability method and FACTIONS are started)
+(Below not yet active preview for next term planned but only the self explainability method, FACTIONS and my big multi-agents as mixture-of-experts concept are started)
 
 Title: FACTIONS
 Lead Author: Blake Harrison 
@@ -108,4 +108,6 @@ Title: Mixture-of-Experts Multi-Agent Ensemble Memory for Foundation Model Compr
 Lead Author: Blake Harrison
 Abstract: - contribution ontological decomposition of latent components of existing world foundation model and LLMs into traceable latent ensemble boosted tree architecture memory for capabilities concept explicit retrieval and blending as distributed multi-agent mixture-of-experts (there is proof multi-agent is mixture-of-experts but not the other way)
 Target Venue: NeurIPS
+
+My concept is to use Grokking to learn fourier features aligned with action dynamics as a novel form of neuro-symbolic grounding as form of multi-agent boosted (perhaps ensemble) Mixture-of-Experts to better understand causal latent dynamics semantic meaning as well as correlations among contributing signals in respect to the multi-modal space.. in a way such that the agent can perform an early form of self reflection (self reflexivity) and recursively reprogram both its world and other experts, while itself being reprogrammed in an evolving emergent AI civilization.
 
