@@ -4,6 +4,15 @@ I found a solid alternative that seems reliable, which I’m using as my primary
 
 For the visual world model side, I’m using NVIDIA γ-World (research.nvidia.com/labs/sil/projects/gamma-world) as a contemporary multi-agent visual-generation comparison, alongside the Cosmos transfer/foundation-model stack. (edited)
 
+Stealth mode concepts exploring..
+
+Grokking paper from my conceptual space
+Grokking with full diversification perfect indicator function as curious waves as fourier space features.. competition and Grokking with fourier components at small random amplitudes with random racing against each other and winner determined by initial magnitude and inititual component and phase misalignment.. as mechanism ensemble boosted AI civilization
+
+
+
+
+
 Hi Yezhou,
 
 I now have a clearer framing for my PhD research:
