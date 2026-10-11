@@ -31,6 +31,8 @@ I found a solid alternative that seems reliable, which I’m using as my primary
 
 For the visual world model side, I’m using NVIDIA γ-World (research.nvidia.com/labs/sil/projects/gamma-world) as a contemporary multi-agent visual-generation comparison, alongside the Cosmos transfer/foundation-model stack. (edited)
 
+Prior notes I mention LUPI RL.. ref here https://arxiv.org/pdf/2509.08177
+
 I found my primary baseline that fits 3/4 of my drafts!.. Should have their paper results by tomorrow (Sept 24) then deriving my (one by one mechanisms) contribution and evaluating different aspects
 
 Baseline Choice: https://icml.cc/virtual/2026/poster/61713 (using this as primary baseline)
@@ -84,7 +86,7 @@ Target venue: IROS
 Title: FACTIONS
 Lead Author: Blake Harrison 
 Abstract:  
-- contribution co-creative imitation learning new intrinsic motivation search paper over symbolic programmable computational creativity latent-spaces leverage new QED more stable reformulation with recent research progress
+- contribution co-creative imitation learning new intrinsic motivation search paper over symbolic programmable computational creativity latent-spaces leverage new offline RL QED more stable reformulation with recent research progress
 
 Question: does self supervised pretraining dwarf emergent capabilities vs direct grounding as bottom up (with a plan) vs top down (capture of derivative concepts)
 Target Venue: IROS
